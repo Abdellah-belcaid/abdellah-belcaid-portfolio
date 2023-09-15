@@ -19,7 +19,7 @@ const Skill = ({ children, x, y }) => {
 function SkillsSection() {
   return (
     <section>
-      <h2 className="font-bold text-6xl md:text-8xl mt-16 md:mt-32 mb-8 md:mb-20 w-full text-center">
+      <h2 className="font-bold text-4xl md:text-6xl mt-16 md:mt-32 mb-8 md:mb-20 w-full text-center">
         Skills
       </h2>
       <div className="w-full h-screen relative flex items-center justify-center rounded-full bg-circularLightSm md:bg-circularLightMd lg:bg-circularLightLg xl:bg-circularLight">

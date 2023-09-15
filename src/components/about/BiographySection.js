@@ -4,8 +4,8 @@ import AnimationNumbers from "../AnimationNumbers";
 function BiographySection() {
   return (
     <section>
-      <div className="grid grid-cols-8 w-full gap-16 sm:gap-8">
-        <div className="col-span-8 flex flex-col items-start md:col-span-4 xl:col-span-3 order-2 md:order-1 justify-start ">
+      <div className="grid md:grid-cols-8 w-full gap-16 sm:gap-8">
+        <div className="flex flex-col items-start md:col-span-4 xl:col-span-3 order-2 md:order-1 justify-start ">
           <h2 className="mb-2 text-lg font-bold uppercase text-white/60">
             Biography
           </h2>
@@ -31,7 +31,7 @@ function BiographySection() {
             </p>
           </div>
         </div>
-        <div className="col-span-8 relative h-max rounded-2xl border-2 border-solid border-white p-8 md:col-span-4 xl:col-span-3 order-1 md:order-2">
+        <div className="relative h-max rounded-2xl border-2 border-solid border-white p-8 md:col-span-4 xl:col-span-3 order-1 md:order-2">
           <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[110%] rounded-2xl bg-white " />
           <Image
             className="rounded-2xl h-auto w-full"
@@ -42,7 +42,7 @@ function BiographySection() {
           />
         </div>
 
-        <div className="col-span-8 flex flex-row items-end justify-between xl:flex-col  xl:col-span-2 order-3 md:order-3">
+        <div className="flex flex-row items-end justify-between xl:flex-col  xl:col-span-2 order-3 md:order-3">
           <div className="flex flex-col items-end justify-center">
             <span className="inline-block text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold">
               <AnimationNumbers value={40} prefix={"+"} postfix={""} />

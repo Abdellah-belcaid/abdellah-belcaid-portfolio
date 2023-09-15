@@ -9,7 +9,7 @@ const Details = ({ type, time, place, info, website }) => {
   return (
     <li
       ref={ref}
-      className=" my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between"
+      className="my-8  first:mt-0 last:mb-0 w-[60%] mx-auto  flex flex-col items-center justify-between"
     >
       <LiIcon reference={ref} />
       <motion.div
@@ -42,13 +42,13 @@ function EducationSection() {
   });
   return (
     <div className="mt-32 md:mt-16">
-      <h2 className="font-bold text-6xl mb-16 w-full text-center">Education</h2>
-      <div ref={ref} className=" md:w-[75%] mx-auto relative ">
+      <h2 className="font-bold text-4xl md:text-6xl  mb-16  w-full text-center ">Education</h2>
+      <div ref={ref} className=" md:w-[75%] mx-auto relative">
         <motion.div
           className="absolute left-9 top-0 w-[4px] h-full bg-white origin-top "
           style={{ scaleY: scrollYProgress }}
         />
-        <ul className="w-full flex flex-col items-start justify-between ml-4">
+        <ul className="w-full flex flex-col items-start justify-between  ml-4">
           {educationPath.map((education, index) => (
             <Details
               key={index}
