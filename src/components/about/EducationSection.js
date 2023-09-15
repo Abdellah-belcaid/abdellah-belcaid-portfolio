@@ -2,7 +2,7 @@
 import { educationPath } from "@/data/education";
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
-import LiIcon from "./LiIcon";
+import LiIcon from "../UI/LiIcon";
 
 const Details = ({ type, time, place, info, website }) => {
   const ref = useRef(null);

@@ -1,9 +1,9 @@
+import TopLeftImg from "@/components/UI/TopLeftImg";
 import Footer from "@/components/layouts/Footer";
+import Header from "@/components/layouts/Header";
 import NavBar from "@/components/layouts/NavBar";
 import { Inter } from "next/font/google";
 import "./style/globals.css";
-import Header from "@/components/layouts/Header";
-import TopLeftImg from "@/components/TopLeftImg";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +20,9 @@ export default function RootLayout({ children }) {
           <TopLeftImg />
           <NavBar />
           <Header />
-          <div className="container mx-auto mt-24 md:px-12 md:py-4 ">{children}</div>
+          <div className="container mx-auto mt-24 md:px-12 md:py-4 ">
+            {children}
+          </div>
           <Footer />
         </div>
       </body>
