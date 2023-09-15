@@ -11,23 +11,28 @@ function BiographySection() {
           </h2>
           <div className="text-[#ADB7BE] font-medium">
             <p>
-              I&apos;m a dedicated FullStack developer with expertise in Java,
-              Spring Boot, and Angular. My strong foundation in software
-              engineering and experience with microservices and RESTful APIs
-              allow me to create user-friendly web applications.
+              I&apos;m Abdellah Belcaid, a dedicated FullStack developer with
+              expertise in Java, Spring Boot, Angular and react/nextJs. With a
+              strong foundation in software engineering and experience in
+              microservices and RESTful APIs, I have the skills to create
+              user-friendly web applications that meet industry standards.
             </p>
 
             <p>
               Currently pursuing a Master&apos;s in Information Systems
-              Engineering at University Cadi Ayyad, I stay up-to-date with
-              industry trends. I&apos;m also skilled in UML, Merise, and use
-              tools like Visual Studio and Eclipse.
+              Engineering at University Cadi Ayyad, I am committed to staying
+              up-to-date with industry trends and the latest technologies. My
+              proficiency extends to UML, Merise, and the use of development
+              tools such as Visual Studio and Eclipse.
             </p>
 
             <p>
-              Beyond coding, I&apos;m passionate about music, presentations, and
-              Japanese culture. I actively engage in community service, bringing
-              joy to children through teamwork and gardening.
+              Beyond coding, I have a passion for music, presentations, and
+              Japanese culture. I have participated in community service and
+              intend to continue engaging in meaningful projects to contribute
+              to our community. My diverse interests and commitment to personal
+              and professional growth drive my ambition to contribute to the
+              world of technology.
             </p>
           </div>
         </div>
