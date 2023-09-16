@@ -3,8 +3,10 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import ProjectTag from "@/components/ProjectTag";
 import ProjectCard from "@/components/ProjectCard";
-import projectsData from "@/data/projects";
+
 import { getGithubRepositories } from "@/services/githubService";
+import Image from "next/image";
+import { projectsData } from "@/data/projects";
 
 function Projects() {
   //   const [repositories, setRepositories] = useState([]);
@@ -26,7 +28,7 @@ function Projects() {
   const handleTagChange = (newTag) => {
     setTag(newTag);
   };
-  const filteredProjects = projectsData.filter((project) =>
+  const filteredProjects = projectsData?.filter((project) =>
     project.tag.includes(tag)
   );
 
@@ -49,8 +51,11 @@ function Projects() {
           />
         ))}
       </div>
-      <ul ref={ref} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mx-8">
-        {filteredProjects.map((project, index) => (
+      <ul
+        ref={ref}
+        className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mx-8"
+      >
+        {filteredProjects?.map((project, index) => (
           <motion.li
             variants={cardVariants}
             initial="initial"
@@ -58,14 +63,7 @@ function Projects() {
             transition={{ duration: 0.5, delay: index * 0.5 }}
             key={index}
           >
-            <ProjectCard
-              title={project.title}
-              description={project.description}
-              imgUrl={project.image}
-              tags={project.tag}
-              gitUrl={project.gitUrl}
-              previewUrl={project.previewUrl}
-            />
+            <ProjectCard project={project} />
           </motion.li>
         ))}
       </ul>
