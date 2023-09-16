@@ -6,8 +6,8 @@ export const projectsData = [
     technologies: ["Next.js", "Tailwind CSS"],
     devURL: "/",
     prodURL: "https://abdellah-belcaid-portfolio.vercel.app/",
-    imageURL: "images/projects/portfolio.png", 
-    duration: "September 2023 - Present", 
+    imageURL: "images/projects/portfolio.png",
+    duration: "September 2023 - Present",
     role: "FullStack Developer",
     tag: ["All", "Web"],
   },
@@ -25,10 +25,23 @@ export const projectsData = [
     tag: ["All", "Web"],
   },
   {
+    title: "Netflix Clone",
+    description:
+      "Developed a Netflix clone using React and Tailwind CSS. Integrated Firebase for user authentication and registration. Users can add their favorite movies to the database using Firestore.",
+    technologies: ["React", "Tailwind CSS", "Firebase", "FireStore"],
+    devURL: "/",
+    prodURL: "https://netflix-react-app-e8295.firebaseapp.com/",
+    imageURL: "images/projects/react_netflix.png",
+    duration: "August 2023 - Present", // Update with the appropriate dates
+    role: "FullStack Developer",
+    tag: ["All", "Web"],
+  },
+
+  {
     title: "Financial Management System for Research Laboratory",
     description:
       "Designed and developed a financial management system for a research laboratory. Utilized Spring Boot for the backend and Angular Material for the frontend.",
-    technologies: ["Spring Boot", "Angular Material"],
+    technologies: ["Spring Boot", "Angular", "Angular Material", "PostgreSQL"],
     devURL: "/",
     prodURL: "/",
     imageURL: "images/projects/IMBd_Clone.png",
@@ -40,7 +53,13 @@ export const projectsData = [
     title: "Library Management Application",
     description:
       "Built a library management application using Spring Boot for the backend, JWT for authentication, and Angular/Angular Material for the frontend.",
-    technologies: ["Spring Boot", "JWT", "Angular/Angular Material"],
+    technologies: [
+      "Spring Boot",
+      "JWT",
+      "Angular",
+      "Angular Material",
+      "MySQL",
+    ],
     devURL: "/",
     prodURL: "/",
     imageURL: "images/projects/IMBd_Clone.png",
@@ -52,7 +71,7 @@ export const projectsData = [
     title: "XML Validation and Transformation Web App",
     description:
       "Developed a web application for validating and transforming XML data. Utilized Django and Bootstrap for the project.",
-    technologies: ["Django", "Bootstrap"],
+    technologies: ["Python", "Django", "Bootstrap"],
     devURL: "/",
     prodURL: "/",
     imageURL: "images/projects/IMBd_Clone.png",
@@ -64,7 +83,14 @@ export const projectsData = [
     title: "Video Acquisition and Machine Learning Web App",
     description:
       "Created a web application for video acquisition and machine learning using Django, Bootstrap, OpenCV, and Channels.",
-    technologies: ["Django", "Bootstrap", "OpenCV", "Channels"],
+    technologies: [
+      "Python",
+      "Django",
+      "Bootstrap",
+      "OpenCV",
+      "Channels",
+      "Redis",
+    ],
     devURL: "/",
     prodURL: "/",
     imageURL: "images/projects/Video_Acquisition.png",
@@ -76,14 +102,12 @@ export const projectsData = [
     title: "Commercial Management Web Application",
     description:
       "Developed a commercial management web application using JEE and Bootstrap for the frontend.",
-    technologies: ["JEE", "Bootstrap"],
+    technologies: ["Java", "JEE", "Bootstrap", "MySql"],
     devURL: "/",
     prodURL: "/",
     imageURL: "images/projects/Commercial_Management.png",
     duration: "February 2022 - June 2022",
     role: "Backend Developer",
-    tag: ["All", "Mobile"],
+    tag: ["All", "Web"],
   },
 ];
-
-

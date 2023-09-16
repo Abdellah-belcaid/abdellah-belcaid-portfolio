@@ -53,7 +53,7 @@ function Projects() {
       </div>
       <ul
         ref={ref}
-        className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mx-8"
+        className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mx-4"
       >
         {filteredProjects?.map((project, index) => (
           <motion.li
@@ -62,6 +62,7 @@ function Projects() {
             animate={isInView ? "animate" : "initial"}
             transition={{ duration: 0.5, delay: index * 0.5 }}
             key={index}
+            
           >
             <ProjectCard project={project} />
           </motion.li>
