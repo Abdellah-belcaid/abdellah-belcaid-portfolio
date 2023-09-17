@@ -3,7 +3,7 @@ import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa"; // Import soci
 
 function Footer() {
   return (
-    <footer className="footer border-t z-10 border-t-[#33353F]  text-white ">
+    <footer className="footer mt-auto border-t z-10 border-t-[#33353F]  text-white ">
       <div className="container p-6 flex justify-between items-center">
         <p className="text-slate-400">&copy; Abdellah Belcaid</p>
         <p className="text-slate-400">2023@ All rights reserved</p>

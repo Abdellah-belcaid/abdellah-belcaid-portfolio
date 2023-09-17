@@ -38,7 +38,7 @@ export const projectsData = [
   },
 
   {
-    title: "Financial Management System for Research Laboratory",
+    title: "Financial Management for a Research Lab",
     description:
       "Designed and developed a financial management system for a research laboratory. Utilized Spring Boot for the backend and Angular Material for the frontend.",
     technologies: ["Spring Boot", "Angular", "Angular Material", "PostgreSQL"],
@@ -68,19 +68,19 @@ export const projectsData = [
     tag: ["All", "Web"],
   },
   {
-    title: "XML Validation and Transformation Web App",
+    title: "XML Validation and Transformation App",
     description:
       "Developed a web application for validating and transforming XML data. Utilized Django and Bootstrap for the project.",
     technologies: ["Python", "Django", "Bootstrap"],
     devURL: "/",
     prodURL: "/",
-    imageURL: "images/projects/IMBd_Clone.png",
+    imageURL: "images/projects/xml_validator.png",
     duration: "December 2022 - January 2023",
     role: "FullStack Developer",
     tag: ["All", "Web"],
   },
   {
-    title: "Video Acquisition and Machine Learning Web App",
+    title: "Video Acquisition and Machine Learning App",
     description:
       "Created a web application for video acquisition and machine learning using Django, Bootstrap, OpenCV, and Channels.",
     technologies: [
