@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { PiCertificateFill } from "react-icons/pi";
 import {
   HiChatBubbleBottomCenterText,
   HiEnvelope,
@@ -15,12 +16,17 @@ export const navData = [
   { name: "home", path: "/", icon: <HiHome /> },
   { name: "about", path: "/about", icon: <HiUser /> },
   { name: "projects", path: "/projects", icon: <HiRectangleGroup /> },
-  { name: "work", path: "/work", icon: <HiViewColumns /> },
   {
-    name: "testimonials",
-    path: "/testimonials",
-    icon: <HiChatBubbleBottomCenterText />,
+    name: "certificates",
+    path: "/certificates", // Replace with your actual path
+    icon: <PiCertificateFill />, // Use the FaCertificate icon
   },
+  // { name: "work", path: "/work", icon: <HiViewColumns /> },
+  // {
+  //   name: "testimonials",
+  //   path: "/testimonials",
+  //   icon: <HiChatBubbleBottomCenterText />,
+  // },
   {
     name: "contact",
     path: "/contact",

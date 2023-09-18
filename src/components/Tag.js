@@ -1,4 +1,4 @@
-function ProjectTag({ tag, onClick, isSelected }) {
+function Tag({ tag, onClick, isSelected }) {
   const buttonStyle = isSelected
     ? "text-white border-purple-500"
     : "text-[#ADB7BE] border-slate-600 hover:border-white";
@@ -12,4 +12,4 @@ function ProjectTag({ tag, onClick, isSelected }) {
   );
 }
 
-export default ProjectTag;
+export default Tag;

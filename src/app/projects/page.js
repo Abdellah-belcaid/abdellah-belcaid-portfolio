@@ -1,11 +1,9 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
-import ProjectTag from "@/components/ProjectTag";
 import ProjectCard from "@/components/ProjectCard";
+import { motion, useInView } from "framer-motion";
+import { useRef, useState } from "react";
 
-import { getGithubRepositories } from "@/services/githubService";
-import Image from "next/image";
+import Tag from "@/components/Tag";
 import { projectsData } from "@/data/projects";
 
 function Projects() {
@@ -43,7 +41,7 @@ function Projects() {
       </h2>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6 ">
         {["All", "Web", "Mobile"].map((tagName) => (
-          <ProjectTag
+          <Tag
             key={tagName}
             onClick={handleTagChange}
             tag={tagName}
@@ -56,16 +54,15 @@ function Projects() {
         className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mx-4"
       >
         {filteredProjects?.map((project, index) => (
-          <motion.li
+          <motion.div
             variants={cardVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
             transition={{ duration: 0.5, delay: index * 0.5 }}
             key={index}
-            
           >
             <ProjectCard project={project} />
-          </motion.li>
+          </motion.div>
         ))}
       </ul>
     </section>
