@@ -3,7 +3,7 @@ import ProjectCard from "@/components/ProjectCard";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 
-import Tag from "@/components/Tag";
+import Tag from "@/components/UI/Tag";
 import { projectsData } from "@/data/projects";
 
 function Projects() {

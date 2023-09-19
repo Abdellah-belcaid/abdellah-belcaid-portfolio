@@ -1,6 +1,6 @@
 "use client";
 import CertificateCard from "@/components/CertificateCard";
-import Tag from "@/components/Tag";
+import Tag from "@/components/UI/Tag";
 import { certificationList } from "@/data/certificates";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
