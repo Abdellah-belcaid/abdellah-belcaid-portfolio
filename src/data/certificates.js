@@ -54,5 +54,31 @@ export const certificationList = [
     tag: ["All", "Frontend", "Backend"],
     viewLink: "",
   },
-  // Add more certifications as needed
+  {
+    name: "Spring Data MongoDB",
+    organization: "MongoDB Certification",
+    date: "July 2023",
+    imageURL: "/images/certificates/spring_data_mongodb.jpg",
+    skillsEarned: ["MongoDB", "Spring Data"],
+    tag: ["All", "Database", "Backend"],
+    viewLink: "",
+  },
+  {
+    name: "Java Basic Certificate",
+    organization: "Java Certification Institute",
+    date: "March 2022",
+    imageURL: "/images/certificates/java_basic_certificate.jpg",
+    skillsEarned: ["Java"],
+    tag: ["All", "Programming"],
+    viewLink: "",
+  },
+  {
+    name: "Data Structures and Algorithms in Java",
+    organization: "Algorithms Certification",
+    date: "December 2021",
+    imageURL: "/images/certificates/Data_Structures_and_Algorithms_in_Java.jpg",
+    skillsEarned: ["Data Structures", "Algorithms", "Java"],
+    tag: ["All", "Programming"],
+    viewLink: "",
+  },
 ];

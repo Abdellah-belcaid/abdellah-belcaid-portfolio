@@ -40,7 +40,7 @@ function Certificates() {
 
       <ul
         ref={ref}
-        className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8 mx-2"
+        className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8 mx-2 lg:mx-4"
       >
         {filteredCertifications?.map((certificate, index) => (
           <motion.div

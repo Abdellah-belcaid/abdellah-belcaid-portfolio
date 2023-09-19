@@ -18,14 +18,16 @@ function CertificateCard({ certificate }) {
       </Link>
       <div className="mt-2 p-2">
         <h3 className="text-white text-lg font-semibold">{name}</h3>
-        <p className="text-gray-400">{organization}</p>
-        <p className="text-gray-400">{date}</p>
-        <div className="flex flex-wrap space-x-2 mt-2">
+        <p className="text-gray-400 text-base">
+          {organization} | {date}
+        </p>
+
+        <div className="flex flex-wrap mr-2 mt-2">
           {skillsEarned &&
             skillsEarned.map((skill, index) => (
               <span
                 key={index}
-                className="text-gray-100 bg-gray-700 dark:bg-white dark:text-gray-900 hover:bg-red-500 hover:text-gray-100 text-sm font-medium mr-2 px-2.5 py-0.5 rounded transition-colors duration-300 ease-in-out mb-2"
+                className="text-gray-100 bg-gray-700 dark:bg-white dark:text-gray-900 hover:bg-red-500 hover:text-gray-100 text-sm font-medium mr-2 px-2.5 py-0.5 rounded transition-colors duration-300 ease-in-out my-1"
               >
                 {skill}
               </span>
