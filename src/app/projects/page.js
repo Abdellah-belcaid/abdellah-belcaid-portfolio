@@ -5,6 +5,7 @@ import { useRef, useState } from "react";
 
 import Tag from "@/components/UI/Tag";
 import { projectsData } from "@/data/projects";
+import SearchBox from "@/components/UI/SearchBox";
 
 function Projects() {
   //   const [repositories, setRepositories] = useState([]);
@@ -21,15 +22,22 @@ function Projects() {
   //   }, []);
 
   const [tag, setTag] = useState("All");
+  const [searchTerm, setSearchTerm] = useState("");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const handleTagChange = (newTag) => {
     setTag(newTag);
   };
-  const filteredProjects = projectsData?.filter((project) =>
-    project.tag.includes(tag)
-  );
 
+  const filteredProjects = projectsData?.filter(
+    (project) =>
+      (project?.tag.includes(tag) || tag === "All") &&
+      project.title.toLowerCase().includes(searchTerm.toLowerCase()) // Include search term
+  );
+  // function to handle search term changes
+  const handleSearchChange = (newSearchTerm) => {
+    setSearchTerm(newSearchTerm);
+  };
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
     animate: { y: 0, opacity: 1 },
@@ -39,6 +47,7 @@ function Projects() {
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-4 ">
         My Projects
       </h2>
+      <SearchBox onSearchChange={handleSearchChange} />
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6 ">
         {["All", "Web", "Mobile"].map((tagName) => (
           <Tag
