@@ -32,14 +32,14 @@ function AchievementSection() {
             key={index}
             className="flex flex-col items-center justify-center mb-4 md:mb-0 mx-2 md:mx-4 xl:mx-0"
           >
-            <h2 className="text-white text-xs md:text-2xl xl:text-4xl font-bold flex flex-row">
+            <h2 className=" text-black dark:text-white text-xs md:text-2xl xl:text-4xl font-bold flex flex-row">
               <AnimationNumbers
                 value={achievement.value}
                 prefix={achievement?.prefix}
                 postfix={achievement.postfix}
               />
             </h2>
-            <p className="text-[#ADB7BE] text-xs xl:text-base font-bold">
+            <p className=" text-white/40 text-xs xl:text-base font-bold">
               {achievement.matric}
             </p>
           </div>

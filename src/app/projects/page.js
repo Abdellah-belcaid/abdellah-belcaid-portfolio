@@ -44,12 +44,12 @@ function Projects() {
   };
   return (
     <section>
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-4 ">
+      <h2 className="text-center text-4xl font-bold text-black dark:text-white mt-4 mb-4 ">
         My Projects
       </h2>
       <SearchBox onSearchChange={handleSearchChange} />
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6 ">
-        {["All", "Web", "Mobile"].map((tagName) => (
+      <div className="text-black dark:text-white flex flex-wrap justify-center items-center gap-2 py-6 ">
+        {["All", "Frent-End", "Back-End", "Full-Stack"].map((tagName) => (
           <Tag
             key={tagName}
             onClick={handleTagChange}
@@ -60,7 +60,7 @@ function Projects() {
       </div>
       <ul
         ref={ref}
-        className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mx-4"
+        className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-8 mx-4"
       >
         {filteredProjects?.map((project, index) => (
           <motion.div

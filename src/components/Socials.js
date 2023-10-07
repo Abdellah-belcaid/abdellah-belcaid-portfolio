@@ -1,11 +1,12 @@
+"use client";
 import Link from "next/link";
 import {
-    RiFacebookFill,
-    RiGithubFill,
-    RiInstagramFill,
-    RiLinkedinBoxFill, // LinkedIn icon
+  RiFacebookFill,
+  RiGithubFill,
+  RiInstagramFill,
+  RiLinkedinBoxFill,
 } from "react-icons/ri";
-import { SiLeetcode } from "react-icons/si"; // LeetCode icon
+import { SiLeetcode } from "react-icons/si";
 
 const socialLinks = {
   facebook: "https://www.facebook.com/Abdellah-belcaid",
@@ -17,7 +18,7 @@ const socialLinks = {
 
 const Socials = () => {
   return (
-    <div className="flex items-center gap-x-5 text-2xl text-white/70">
+    <div className="flex items-center gap-x-5 text-xl md:text-2xl dark:text-white/70 text-black">
       <Link
         href={socialLinks.facebook}
         className="hover:text-accent transition-all duration-300"

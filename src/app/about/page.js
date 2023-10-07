@@ -6,7 +6,7 @@ import SkillsSection from "@/components/about/SkillsSection";
 
 function About() {
   return (
-    <div className="text-white items-center py-8 px-4 sm:py-16 xl:px-12 ">
+    <div className="text-black dark:text-white items-center py-8 px-4 sm:py-16 xl:px-12 ">
       <Circles />
       <div>
         <h2 className="text-4xl md:text-6xl font-bold mb-12 flex flex-col items-center justify-center">

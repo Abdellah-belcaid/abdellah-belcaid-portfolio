@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  --line-color: #e5e7eb;
+}
 
-
+html.dark {
+  --line-color: rgba(255, 255, 255, 0.2);
+}
 
 /* 
 :root {
@@ -29,3 +34,34 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
+
+
+/* @layer base {
+  :root {
+    --color-bkg: 210deg 40% 98%;
+    --color-content: 217deg 32.6% 17.5%;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-bkg: 217deg 32.6% 17.5%;
+      --color-content: 210deg 40% 98%;
+     
+    }
+  }
+} */
+
+
+@keyframes colorChange {
+  0% {
+    background-color: #ff5733; /* Start color */
+  }
+  50% {
+    background-color: #ffcc00; /* Mid color */
+  }
+  100% {
+    background-color: #4caf50; /* End color */
+  }
+}
+
+

@@ -33,11 +33,11 @@ function Certificates() {
   };
   return (
     <section>
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-4 ">
+      <h2 className="text-center text-4xl font-bold text-black dark:text-white mt-4 mb-4 ">
         My Certificates
       </h2>
       <SearchBox onSearchChange={handleSearchChange} />
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6 ">
+      <div className="text-black dark:text-white flex flex-wrap  justify-center items-center gap-2 py-6 ">
         {["All", "Frontend", "Backend", "Database", "Security"].map(
           (tagName) => (
             <Tag

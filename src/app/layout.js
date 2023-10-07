@@ -3,6 +3,7 @@ import Footer from "@/components/layouts/Footer";
 import Header from "@/components/layouts/Header";
 import NavBar from "@/components/layouts/NavBar";
 import { Inter } from "next/font/google";
+import Providers from "./Providers";
 import "./style/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -16,15 +17,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex min-h-screen flex-col bg-[#131424]">
-          <TopLeftImg />
-          <NavBar />
-          <Header />
-          <div className="container mx-auto mt-24 md:px-12 md:py-4 ">
-            {children}
+        <Providers>
+          <div className="flex min-h-screen flex-col  text-content bg-LightModeCol dark:bg-DarkModeCol ">
+            <TopLeftImg />
+            <NavBar />
+            <Header />
+            <div className="container mx-auto mt-24 md:px-12 md:py-4 ">
+              {children}
+            </div>
+            <Footer />
           </div>
-          <Footer />
-        </div>
+        </Providers>
       </body>
     </html>
   );

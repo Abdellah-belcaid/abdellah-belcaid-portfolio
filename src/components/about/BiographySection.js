@@ -6,10 +6,10 @@ function BiographySection() {
     <section>
       <div className="grid md:grid-cols-8 w-full gap-16 sm:gap-8">
         <div className="flex flex-col items-start md:col-span-4 xl:col-span-3 order-2 md:order-1 justify-start ">
-          <h2 className="mb-2 text-lg font-bold uppercase text-white/60">
+          <h2 className="mb-2 text-lg font-bold uppercase text-black dark:text-white/60">
             Biography
           </h2>
-          <div className="text-[#ADB7BE] font-medium">
+          <div className="text-[#394046] dark:text-[#ADB7BE] font-medium">
             <p>
               I&apos;m Abdellah Belcaid, a dedicated FullStack developer with
               expertise in Java, Spring Boot, Angular and react/nextJs. With a

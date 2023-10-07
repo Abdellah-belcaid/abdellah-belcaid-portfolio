@@ -1,8 +1,17 @@
 "use client";
 import { sendEmail } from "@/services/emailService";
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+
+import {
+  RiGithubFill,
+  RiLinkedinBoxFill
+} from "react-icons/ri";
+
+const socialLinks = {
+  linkedin: "https://www.linkedin.com/in/Abdellah-belcaid",
+  github: "https://github.com/Abdellah-belcaid",
+};
 
 function Contact() {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
@@ -28,31 +37,21 @@ function Contact() {
 
   return (
     <section className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative mx-6">
-      <div className="bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-purple-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg  absolute top-[100%] -left-4 transform -translate-x-1/2 -translate-y-1/2 "></div>
+      <div className="bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-purple-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg  absolute top-[96%] -left-4 transform -translate-x-1/2 -translate-y-1/2 "></div>
       <div className="z-10">
-        <h5 className="text-xl font-bold text-white my-2 ">Let us Connect</h5>
-        <p className="text-[#ADB7BE] mb-4 max-w-md ">
+        <h5 className="text-xl font-bold text-black dark:text-white my-2 ">Let us Connect</h5>
+        <p className="text-slate-700 dark:text-[#ADB7BE] mb-4 max-w-md ">
           Connecting with me opens doors to collaboration, innovation, and a
           world of creative possibilities. Let us join forces to make remarkable
           ideas come to life and achieve extraordinary goals together. Don not
           miss the chance to be a part of our exciting journey.
         </p>
-        <div className="socials flex flex-row gap-3 ">
-          <Link href={"/"}>
-            <Image
-              src={"/images/socialMedia/github_icon.svg"}
-              width={30}
-              height={30}
-              alt=""
-            />
+        <div className="socials flex flex-row gap-3 text-black dark:text-white ">
+          <Link href={socialLinks.github}>
+            <RiGithubFill className="hover:text-accent " />
           </Link>
-          <Link href={"/"}>
-            <Image
-              src={"/images/socialMedia/linkedin_icon.svg"}
-              width={30}
-              height={30}
-              alt=""
-            />
+          <Link href={socialLinks.linkedin}>
+            <RiLinkedinBoxFill className="hover:text-accent " />
           </Link>
         </div>
       </div>
@@ -62,7 +61,7 @@ function Contact() {
             <div className="flex flex-col my-4 md:my-0">
               <label
                 htmlFor="name"
-                className="text-white block mb-1 text-sm font-medium"
+                className="text-black dark:text-white block mb-1 text-sm font-medium"
               >
                 Your name
               </label>
@@ -78,7 +77,7 @@ function Contact() {
             <div className="flex flex-col">
               <label
                 htmlFor="email"
-                className="text-white block mb-1 text-sm font-medium"
+                className="text-black dark:text-white block mb-1 text-sm font-medium"
               >
                 Your email
               </label>
@@ -95,7 +94,7 @@ function Contact() {
           <div className="mb-6">
             <label
               htmlFor="subject"
-              className="text-white block mb-1 text-sm font-medium"
+              className="text-black dark:text-white block mb-1 text-sm font-medium"
             >
               Subject
             </label>
@@ -111,7 +110,7 @@ function Contact() {
           <div className="mb-6">
             <label
               htmlFor="message"
-              className="text-white block mb-1 text-sm font-medium"
+              className="text-black dark:text-white block mb-1 text-sm font-medium"
             >
               Message
             </label>
@@ -126,7 +125,7 @@ function Contact() {
           </div>
           <button
             type="submit"
-            className="bg-purple-500 hover:bg-purple-600 text-white font-medium py-2.5 px-5 rounded-lg w-full  "
+            className="bg-purple-500 hover:bg-purple-600 text-black dark:text-white font-medium py-2.5 px-5 rounded-lg w-full  "
           >
             Send Message
           </button>

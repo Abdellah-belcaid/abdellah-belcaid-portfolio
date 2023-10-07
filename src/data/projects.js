@@ -1,5 +1,6 @@
 export const projectsData = [
   {
+    id: 1,
     title: "Personal Portfolio",
     description:
       "Developed my personal portfolio website using Next.js and Tailwind CSS to showcase my web development projects and skills.",
@@ -9,10 +10,11 @@ export const projectsData = [
     imageURL: "/images/projects/portfolio.png",
     duration: "September 2023 - Present",
     role: "FullStack Developer",
-    tag: ["All", "Web"],
+    tag: ["All", "Front-End"],
   },
 
   {
+    id: 2,
     title: "IMDb Clone - Movie and TV Show Website",
     description:
       "Developed a website using Next.js and Tailwind CSS to display information about movies and TV shows. Integrated the TMDB API for data retrieval.",
@@ -22,9 +24,10 @@ export const projectsData = [
     imageURL: "/images/projects/IMBd_Clone.png",
     duration: "August 2023 - Present",
     role: "FullStack Developer",
-    tag: ["All", "Web"],
+    tag: ["All", "Front-End"],
   },
   {
+    id: 3,
     title: "Netflix Clone",
     description:
       "Developed a Netflix clone using React and Tailwind CSS. Integrated Firebase for user authentication and registration. Users can add their favorite movies to the database using Firestore.",
@@ -32,12 +35,13 @@ export const projectsData = [
     devURL: "/",
     prodURL: "https://netflix-react-app-e8295.firebaseapp.com/",
     imageURL: "/images/projects/react_netflix.png",
-    duration: "August 2023 - Present", // Update with the appropriate dates
+    duration: "August 2023 - Present",
     role: "FullStack Developer",
-    tag: ["All", "Web"],
+    tag: ["All", "Front-End"],
   },
 
   {
+    id: 4,
     title: "Financial Management for a Research Lab",
     description:
       "Designed and developed a financial management system for a research laboratory. Utilized Spring Boot for the backend and Angular Material for the frontend.",
@@ -47,9 +51,10 @@ export const projectsData = [
     imageURL: "/images/projects/IMBd_Clone.png",
     duration: "May 2023 - June 2023",
     role: "FullStack Developer",
-    tag: ["All", "Web"],
+    tag: ["All", "FullStack"],
   },
   {
+    id: 5,
     title: "Library Management Application",
     description:
       "Built a library management application using Spring Boot for the backend, JWT for authentication, and Angular/Angular Material for the frontend.",
@@ -65,9 +70,10 @@ export const projectsData = [
     imageURL: "/images/projects/IMBd_Clone.png",
     duration: "March 2023 - Present",
     role: "FullStack Developer",
-    tag: ["All", "Web"],
+    tag: ["All", "FullStack"],
   },
   {
+    id: 6,
     title: "XML Validation and Transformation App",
     description:
       "Developed a web application for validating and transforming XML data. Utilized Django and Bootstrap for the project.",
@@ -77,9 +83,10 @@ export const projectsData = [
     imageURL: "/images/projects/xml_validator.png",
     duration: "December 2022 - January 2023",
     role: "FullStack Developer",
-    tag: ["All", "Web"],
+    tag: ["All", "FullStack"],
   },
   {
+    id: 7,
     title: "Video Acquisition and Machine Learning App",
     description:
       "Created a web application for video acquisition and machine learning using Django, Bootstrap, OpenCV, and Channels.",
@@ -96,9 +103,10 @@ export const projectsData = [
     imageURL: "/images/projects/Video_Acquisition.png",
     duration: "December 2022 - January 2023",
     role: "FullStack Developer",
-    tag: ["All", "Web"],
+    tag: ["All", "FullStack"],
   },
   {
+    id: 8,
     title: "Commercial Management Web Application",
     description:
       "Developed a commercial management web application using JEE and Bootstrap for the frontend.",
@@ -108,6 +116,6 @@ export const projectsData = [
     imageURL: "/images/projects/Commercial_Management.png",
     duration: "February 2022 - June 2022",
     role: "Backend Developer",
-    tag: ["All", "Web"],
+    tag: ["All", "FullStack"],
   },
 ];

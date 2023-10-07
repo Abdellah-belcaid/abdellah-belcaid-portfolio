@@ -7,7 +7,7 @@ function CertificateCard({ certificate }) {
 
   return (
     <li className="col-span-1 h-full w-full p-2 border border-solid border-white rounded-2xl">
-      <Link href={viewLink} className="w-full cursor-pointer  rounded-lg">
+      <Link href={viewLink} className="w-full cursor-pointer rounded-lg">
         <Image
           src={imageURL}
           alt={name}
@@ -17,11 +17,10 @@ function CertificateCard({ certificate }) {
         />
       </Link>
       <div className="mt-2 p-2">
-        <h3 className="text-white text-lg font-semibold">{name}</h3>
-        <p className="text-gray-400 text-base">
+        <h3 className="text-black dark:text-white text-lg font-semibold">{name}</h3>
+        <p className="text-black dark:text-white/50 text-base">
           {organization} | {date}
         </p>
-
         <div className="flex flex-wrap mr-2 mt-2">
           {skillsEarned &&
             skillsEarned.map((skill, index) => (

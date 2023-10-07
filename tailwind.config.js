@@ -10,14 +10,27 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        circularLight:
+        // Dark Mode
+        circularDark:
           "repeating-radial-gradient(rgba(255, 255, 255, 0.4) 1px, #131424 6px, #131424 100px)",
-        circularLightLg:
+        circularDarkLg:
           "repeating-radial-gradient(rgba(255, 255, 255, 0.4) 1px, #131424 6px, #131424 80px)",
-        circularLightMd:
+        circularDarkMd:
           "repeating-radial-gradient(rgba(255, 255, 255, 0.4) 1px, #131424 6px, #131424 60px)",
-        circularLightSm:
+        circularDarkSm:
           "repeating-radial-gradient(rgba(255, 255, 255, 0.4) 1px, #131424 6px, #131424 40px)",
+ 
+        // Light Mode
+        circularLight:
+          "repeating-radial-gradient(rgba(0, 0, 0, 1) 1px, hsl(198, 15%, 67%) 6px, hsl(198, 15%, 67%) 100px)",
+        circularLightLg:
+          "repeating-radial-gradient(rgba(0, 0, 0, 1) 1px, hsl(198, 15%, 67%) 6px, hsl(198, 15%, 67%) 80px)",
+        circularLightMd:
+          "repeating-radial-gradient(rgba(0, 0, 0, 1) 1px, hsl(198, 15%, 67%) 6px, hsl(198, 15%, 67%) 60px)",
+        circularLightSm:
+          "repeating-radial-gradient(rgba(0, 0, 0, 1) 1px, hsl(198, 15%, 67%) 6px, hsl(198, 15%, 67%) 40px)",
+
+        // Other gradients
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
@@ -34,6 +47,9 @@ module.exports = {
     },
     colors: {
       ...colors,
+      DarkModeCol: "#131424",
+      LightModeCol: "hsl(198, 15%, 67%)",
+      content: "hsl(210 40% 98%)",
       primary: "#131424",
       secondary: "#393A47",
       accent: "#F13024",
@@ -44,4 +60,5 @@ module.exports = {
     },
   },
   plugins: [],
+  darkMode: "class",
 };
