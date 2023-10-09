@@ -1,24 +1,26 @@
+import { projectsData } from "@/data/projects";
 import AnimationNumbers from "./AnimationNumbers";
+import { certificationList } from "@/data/certificates";
 
 const achievementList = [
   {
     matric: "Projects",
-    value: 12,
+    value: projectsData.length,
     postfix: "+",
   },
   {
     matric: "Users",
-    value: 12,
+    value: 0,
     postfix: "+",
   },
   {
-    matric: "Awards",
-    value: 12,
+    matric: "Certificates",
+    value: certificationList.length,
     postfix: "+",
   },
   {
     matric: "Years",
-    value: 12,
+    value: 0,
     postfix: "+",
   },
 ];

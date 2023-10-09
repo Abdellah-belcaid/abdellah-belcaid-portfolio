@@ -1,5 +1,7 @@
 import Image from "next/image";
 import AnimationNumbers from "../AnimationNumbers";
+import { projectsData } from "@/data/projects";
+import { certificationList } from "@/data/certificates";
 
 function BiographySection() {
   return (
@@ -50,7 +52,7 @@ function BiographySection() {
         <div className="flex flex-row items-end justify-between xl:flex-col  xl:col-span-2 order-3 md:order-3">
           <div className="flex flex-col items-end justify-center">
             <span className="inline-block text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold">
-              <AnimationNumbers value={40} prefix={"+"} postfix={""} />
+              <AnimationNumbers value={0} prefix={"+"} postfix={""} />
             </span>
             <h2 className="text-sm sm:text-base md:text-lg xl:text-xl font-medium capitalize text-white/60">
               satisfied client
@@ -58,7 +60,7 @@ function BiographySection() {
           </div>
           <div className="flex flex-col items-end justify-center">
             <span className="inline-block text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold">
-              <AnimationNumbers value={10} prefix={"~"} postfix={""} />
+              <AnimationNumbers value={projectsData.length} prefix={"~"} postfix={""} />
             </span>
             <h2 className="text-sm sm:text-base md:text-lg xl:text-xl font-medium capitalize text-white/60">
               Projects
@@ -66,7 +68,7 @@ function BiographySection() {
           </div>
           <div className="flex flex-col items-end justify-center">
             <span className="inline-block text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold">
-              <AnimationNumbers value={40} prefix={"+"} postfix={""} />
+              <AnimationNumbers value={certificationList.length} prefix={"+"} postfix={""} />
             </span>
             <h2 className="text-sm sm:text-base md:text-lg xl:text-xl font-medium capitalize text-white/60">
               Certificates

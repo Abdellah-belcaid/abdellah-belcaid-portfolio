@@ -36,9 +36,11 @@ export default function Home() {
               expectations. Let us collaborate and bring your ideas to life.
             </p>
             <div className="mt-2">
-              <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-red-500 hover:bg-slate-200 text-white ">
-                Hire me
-              </button>
+              <Link href={"/contact"}>
+                <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-red-500 hover:bg-slate-200 text-white ">
+                  Hire me
+                </button>
+              </Link>
               <Link
                 href={
                   "https://cdn2.cvdesignr.com/u/cv/pdf/64ad9a7d97a5a_d6eed7649dfde42b7594aa1a3e04193ece42a867_63b12.pdf"
