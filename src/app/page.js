@@ -45,7 +45,7 @@ export default function Home() {
                 href={
                   "https://cdn2.cvdesignr.com/u/cv/pdf/6426fe41c9810_e504a166911b3696080e4c7259663162c4b47bc4_63b12.pdf"
                 }
-                download={"resume"}
+                download={"Resume"}
               >
                 <button className="px-1 py-1 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-red-500 hover:bg-slate-200 text-white mt-2">
                   <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 ">
