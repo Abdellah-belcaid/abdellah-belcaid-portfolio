@@ -7,7 +7,7 @@ import { TypeAnimation } from "react-type-animation";
 
 export default function Home() {
   return (
-    <main className="flex flex-col mt-4 md:mt-0">
+    <main className="flex flex-col mt-4 md:mt-0 relative">
       <section className="py-8 px-4 sm:py-16 xl:px-12">
         <ParticlesContainer />
         <div className="grid grid-cols-1 sm:grid-cols-12">
@@ -35,9 +35,9 @@ export default function Home() {
               engineering, I create exceptional web experiences that exceed
               expectations. Let us collaborate and bring your ideas to life.
             </p>
-            <div className="mt-2">
+            <div className="mt-2 relative">
               <Link href={"/contact"}>
-                <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-red-500 hover:bg-slate-200 text-white ">
+                <button className="px-6 py-3 w-full cursor-pointer sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-red-500 hover:bg-slate-200 text-white z-20 ">
                   Hire me
                 </button>
               </Link>
