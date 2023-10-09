@@ -1,14 +1,10 @@
 "use client";
 import { projectsData } from "@/data/projects";
 import Image from "next/image";
-import Link from "next/link";
 
-
-
-import { RiPlayCircleFill, RiComputerLine, RiGithubFill } from "react-icons/ri";
+import { RiComputerLine, RiGithubFill } from "react-icons/ri";
 
 function Project({ params }) {
-  
   const projectId = parseInt(params.id, 10);
 
   // Find the project with the matching id
@@ -16,7 +12,7 @@ function Project({ params }) {
 
   //Handle the case when the project is not found
   if (!project) {
-    throw Error("Project not found");
+    throw Error(`Project with the id ${projectId} not found`);
   }
   const {
     id,

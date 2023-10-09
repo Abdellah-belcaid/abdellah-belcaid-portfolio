@@ -49,7 +49,7 @@ function Projects() {
       </h2>
       <SearchBox onSearchChange={handleSearchChange} />
       <div className="text-black dark:text-white flex flex-wrap justify-center items-center gap-2 py-6 ">
-        {["All", "Frent-End", "Back-End", "Full-Stack"].map((tagName) => (
+        {["All", "Front-End", "Back-End", "Full-Stack"].map((tagName) => (
           <Tag
             key={tagName}
             onClick={handleTagChange}

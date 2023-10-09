@@ -57,7 +57,7 @@ export default function Home() {
             <div className="rounded-full bg-slate-800 dark:bg-[#181818] w-[250px] h-[250px]  lg:w-[400px] lg:h-[400px] relative">
               <Image
                 className="absolute rounded-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                src={"/images/avatar.png"}
+                src={"/images/avatar 2.png"}
                 width={350}
                 height={350}
                 alt=""
