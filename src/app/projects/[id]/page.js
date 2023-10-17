@@ -1,4 +1,5 @@
 "use client";
+import ProjectImgRow from "@/components/project/ProjectImgRow";
 import { projectsData } from "@/data/projects";
 import Image from "next/image";
 
@@ -25,11 +26,12 @@ function Project({ params }) {
     duration,
     role,
     tag,
+    media,
   } = project;
 
   return (
     <div className=" mx-2 md:mx-8">
-      <div className="w-full ml-4 mr-4 rounded-xl relative border ">
+      <div className="w-full  rounded-xl relative border ">
         {/* <Image
           className="w-full h-full object-cover absolute mix-blend-overlay rounded-xl "
           src={imageURL}
@@ -98,6 +100,7 @@ function Project({ params }) {
           </div>
         </div>
       </div>
+      <ProjectImgRow media={media} />
     </div>
   );
 }

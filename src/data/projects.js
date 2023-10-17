@@ -7,7 +7,15 @@ export const projectsData = [
     technologies: ["Next.js", "Tailwind CSS"],
     devURL: "/",
     prodURL: "https://abdellah-belcaid-portfolio.vercel.app/",
-    imageURL: "/images/projects/portfolio.png",
+    imageURL: "/images/projects/portfolio/portfolio_1.png",
+    media: [
+      "/images/projects/portfolio/portfolio_0.png",
+      "/images/projects/portfolio/portfolio_1.png",
+      "/images/projects/portfolio/portfolio_2.png",
+      "/images/projects/portfolio/portfolio_3.png",
+      "/images/projects/portfolio/portfolio_4.png",
+      "/images/projects/portfolio/portfolio_5.png",
+    ],
     duration: "September 2023 - Present",
     role: "Full-Stack Developer",
     tag: ["All", "Front-End"],
@@ -22,10 +30,11 @@ export const projectsData = [
     devURL: "/",
     prodURL: "https://next-imdb-clone-ten.vercel.app",
     imageURL: "/images/projects/IMBd_Clone.png",
+    media: ["/images/projects/IMBd_Clone.png"],
     duration: "August 2023 - Present",
-    role: "Full-Stack Developer",
     tag: ["All", "Front-End"],
   },
+
   {
     id: 3,
     title: "Netflix Clone",
@@ -35,8 +44,8 @@ export const projectsData = [
     devURL: "/",
     prodURL: "https://netflix-react-app-e8295.firebaseapp.com/",
     imageURL: "/images/projects/react_netflix.png",
+    media: ["/images/projects/react_netflix.png"],
     duration: "August 2023 - Present",
-    role: "Full-Stack Developer",
     tag: ["All", "Front-End"],
   },
 
@@ -49,8 +58,11 @@ export const projectsData = [
     devURL: "/",
     prodURL: "/",
     imageURL: "/images/projects/lab_management.png",
+    media: [
+      "/images/projects/lab_management.png",
+      "/images/projects/lab_management_1.png",
+    ],
     duration: "May 2023 - June 2023",
-    role: "Full-Stack Developer",
     tag: ["All", "Full-Stack"],
   },
   {
@@ -68,10 +80,11 @@ export const projectsData = [
     devURL: "/",
     prodURL: "/",
     imageURL: "/images/projects/book_store.png",
+    media: ["/images/projects/portfolio.png"],
     duration: "March 2023 - Present",
-    role: "Full-Stack Developer",
     tag: ["All", "Full-Stack"],
   },
+
   {
     id: 6,
     title: "XML Validation and Transformation App",
@@ -81,8 +94,11 @@ export const projectsData = [
     devURL: "/",
     prodURL: "/",
     imageURL: "/images/projects/xml_validator.png",
+    media: [
+      "/images/projects/xml_validator.png",
+      "/images/projects/xml_validator_1.png",
+    ],
     duration: "December 2022 - January 2023",
-    role: "Full-Stack Developer",
     tag: ["All", "Full-Stack"],
   },
   {
@@ -101,8 +117,8 @@ export const projectsData = [
     devURL: "/",
     prodURL: "/",
     imageURL: "/images/projects/Video_Acquisition.png",
+    media: ["/images/projects/portfolio.png"],
     duration: "December 2022 - January 2023",
-    role: "Full-Stack Developer",
     tag: ["All", "Full-Stack"],
   },
   {
@@ -114,8 +130,8 @@ export const projectsData = [
     devURL: "/",
     prodURL: "/",
     imageURL: "/images/projects/Commercial_Management.png",
+    media: ["/images/projects/portfolio.png"],
     duration: "February 2022 - June 2022",
-    role: "Backend Developer",
     tag: ["All", "Full-Stack"],
   },
 ];

@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-const colors = require("tailwindcss/colors");
 
 module.exports = {
   content: [
@@ -19,7 +18,7 @@ module.exports = {
           "repeating-radial-gradient(rgba(255, 255, 255, 0.4) 1px, #131424 6px, #131424 60px)",
         circularDarkSm:
           "repeating-radial-gradient(rgba(255, 255, 255, 0.4) 1px, #131424 6px, #131424 40px)",
- 
+
         // Light Mode
         circularLight:
           "repeating-radial-gradient(rgba(0, 0, 0, 1) 1px, hsl(198, 15%, 67%) 6px, hsl(198, 15%, 67%) 100px)",
@@ -44,21 +43,16 @@ module.exports = {
           "50%": { backgroundPosition: "100% 50%" },
         },
       },
-    },
-    colors: {
-      ...colors,
-      DarkModeCol: "#131424",
-      LightModeCol: "hsl(198, 15%, 67%)",
-      content: "hsl(210 40% 98%)",
-      primary: "#131424",
-      secondary: "#393A47",
-      accent: "#F13024",
-      // Update the color names
-      neutral: colors.trueGray, // trueGray renamed to neutral
-      gray: colors.coolGray, // coolGray renamed to gray
-      slate: colors.blueGray, // blueGray renamed to slate
+      colors: {        
+        DarkModeCol: "#131424",
+        LightModeCol: "hsl(198, 15%, 67%)",
+        content: "hsl(210 40% 98%)",
+        primary: "#131424",
+        secondary: "#393A47",
+        accent: "#F13024",       
+      },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar-hide")],
   darkMode: "class",
 };

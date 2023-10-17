@@ -1,5 +1,5 @@
 "use client";
-import ProjectCard from "@/components/ProjectCard";
+import ProjectCard from "@/components/project/ProjectCard";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 
