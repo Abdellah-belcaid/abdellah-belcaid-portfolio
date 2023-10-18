@@ -8,14 +8,11 @@ export const projectsData = [
     devURL: "/",
     prodURL: "https://abdellah-belcaid-portfolio.vercel.app/",
     imageURL: "/images/projects/portfolio/portfolio_1.png",
-    media: [
-      "/images/projects/portfolio/portfolio_0.png",
-      "/images/projects/portfolio/portfolio_1.png",
-      "/images/projects/portfolio/portfolio_2.png",
-      "/images/projects/portfolio/portfolio_3.png",
-      "/images/projects/portfolio/portfolio_4.png",
-      "/images/projects/portfolio/portfolio_5.png",
-    ],
+    media: Array.from(
+      { length: 6 },
+      (_, i) => `/images/projects/portfolio/portfolio_${i}.png`
+    ),
+
     duration: "September 2023 - Present",
     role: "Full-Stack Developer",
     tag: ["All", "Front-End"],
@@ -29,8 +26,13 @@ export const projectsData = [
     technologies: ["Next.js", "Tailwind CSS", "TMDB API"],
     devURL: "/",
     prodURL: "https://next-imdb-clone-ten.vercel.app",
-    imageURL: "/images/projects/IMBd_Clone.png",
-    media: ["/images/projects/IMBd_Clone.png"],
+    imageURL: "/images/projects/imbd_clone/imbd_clone_0.png",
+
+    media: Array.from(
+      { length: 5 },
+      (_, i) => `/images/projects/imbd_clone/imbd_clone_${i}.png`
+    ),
+
     duration: "August 2023 - Present",
     tag: ["All", "Front-End"],
   },
@@ -117,7 +119,7 @@ export const projectsData = [
     devURL: "/",
     prodURL: "/",
     imageURL: "/images/projects/Video_Acquisition.png",
-    media: ["/images/projects/portfolio.png"],
+    media: ["/images/projects/Video_Acquisition.png"],
     duration: "December 2022 - January 2023",
     tag: ["All", "Full-Stack"],
   },

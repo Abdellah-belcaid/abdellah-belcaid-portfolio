@@ -13,8 +13,8 @@ function About() {
           About me
         </h2>
         <BiographySection />
-        <SkillsSection />
         <EducationSection />
+        <SkillsSection />
       </div>
       <Bulb />
     </div>

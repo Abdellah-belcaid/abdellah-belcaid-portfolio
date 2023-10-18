@@ -43,7 +43,7 @@ export default function Home() {
               </Link>
               <Link
                 href={
-                  "https://cdn2.cvdesignr.com/u/cv/pdf/6426fe41c9810_e504a166911b3696080e4c7259663162c4b47bc4_63b12.pdf"
+                  "https://cvdesignr.com/p/6426fe41c9810?hl=en_GB"
                 }
                 download={"Resume"}
               >
