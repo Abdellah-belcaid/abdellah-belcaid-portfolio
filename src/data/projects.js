@@ -5,7 +5,7 @@ export const projectsData = [
     description:
       "Developed my personal portfolio website using Next.js and Tailwind CSS to showcase my web development projects and skills.",
     technologies: ["Next.js", "Tailwind CSS"],
-    devURL: "/",
+    devURL: "https://github.com/Abdellah-belcaid/abdellah-belcaid-portfolio",
     prodURL: "https://abdellah-belcaid-portfolio.vercel.app/",
     imageURL: "/images/projects/portfolio/portfolio_1.png",
     media: Array.from(
@@ -27,12 +27,10 @@ export const projectsData = [
     devURL: "/",
     prodURL: "https://next-imdb-clone-ten.vercel.app",
     imageURL: "/images/projects/imbd_clone/imbd_clone_0.png",
-
     media: Array.from(
       { length: 5 },
       (_, i) => `/images/projects/imbd_clone/imbd_clone_${i}.png`
     ),
-
     duration: "August 2023 - Present",
     tag: ["All", "Front-End"],
   },
@@ -93,13 +91,13 @@ export const projectsData = [
     description:
       "Developed a web application for validating and transforming XML data. Utilized Django and Bootstrap for the project.",
     technologies: ["Python", "Django", "Bootstrap"],
-    devURL: "/",
-    prodURL: "/",
-    imageURL: "/images/projects/xml_validator.png",
-    media: [
-      "/images/projects/xml_validator.png",
-      "/images/projects/xml_validator_1.png",
-    ],
+    devURL: "https://github.com/Abdellah-belcaid/xml-operations-app",
+    prodURL: "https://xml-operations-app.onrender.com/",
+    imageURL: "/images/projects/xml_operations/xml_operations_0.png",
+    media: Array.from(
+      { length: 5 },
+      (_, i) => `/images/projects/xml_operations/xml_operations_${i}.png`
+    ),
     duration: "December 2022 - January 2023",
     tag: ["All", "Full-Stack"],
   },
