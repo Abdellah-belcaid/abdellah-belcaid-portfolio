@@ -95,7 +95,7 @@ export const projectsData = [
     prodURL: "https://xml-operations-app.onrender.com/",
     imageURL: "/images/projects/xml_operations/xml_operations_0.png",
     media: Array.from(
-      { length: 5 },
+      { length: 8 },
       (_, i) => `/images/projects/xml_operations/xml_operations_${i}.png`
     ),
     duration: "December 2022 - January 2023",
