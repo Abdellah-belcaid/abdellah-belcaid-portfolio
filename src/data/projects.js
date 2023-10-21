@@ -144,7 +144,8 @@ export const projectsData = [
     technologies: ["Java", "JEE", "Bootstrap", "MySql"],
     devURL: "/",
     prodURL: "/",
-    imageURL: "/images/projects/commercial_management_0.png",
+    imageURL:
+      "/images/projects/commercial_management/commercial_management_0.png",
     media: Array.from(
       { length: 1 },
       (_, i) =>
