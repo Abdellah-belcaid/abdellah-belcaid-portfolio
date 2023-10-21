@@ -12,10 +12,10 @@ export const projectsData = [
       { length: 6 },
       (_, i) => `/images/projects/portfolio/portfolio_${i}.png`
     ),
-
     duration: "September 2023 - Present",
     role: "Full-Stack Developer",
     tag: ["All", "Front-End"],
+    video: null,
   },
 
   {
@@ -33,6 +33,7 @@ export const projectsData = [
     ),
     duration: "August 2023 - Present",
     tag: ["All", "Front-End"],
+    video: null,
   },
 
   {
@@ -43,10 +44,14 @@ export const projectsData = [
     technologies: ["React", "Tailwind CSS", "Firebase", "FireStore"],
     devURL: "/",
     prodURL: "https://netflix-react-app-e8295.firebaseapp.com/",
-    imageURL: "/images/projects/react_netflix.png",
-    media: ["/images/projects/react_netflix.png"],
+    imageURL: "/images/projects/react_netflix/react_netflix_0.png",
+    media: Array.from(
+      { length: 1 },
+      (_, i) => `/images/projects/react_netflix/react_netflix_${i}.png`
+    ),
     duration: "August 2023 - Present",
     tag: ["All", "Front-End"],
+    video: null,
   },
 
   {
@@ -57,13 +62,14 @@ export const projectsData = [
     technologies: ["Spring Boot", "Angular", "Angular Material", "PostgreSQL"],
     devURL: "/",
     prodURL: "/",
-    imageURL: "/images/projects/lab_management.png",
-    media: [
-      "/images/projects/lab_management.png",
-      "/images/projects/lab_management_1.png",
-    ],
+    imageURL: "/images/projects/lab_management/lab_management_0.png",
+    media: Array.from(
+      { length: 1 },
+      (_, i) => `/images/projects/lab_management/lab_management_${i}.png`
+    ),
     duration: "May 2023 - June 2023",
     tag: ["All", "Full-Stack"],
+    video: null,
   },
   {
     id: 5,
@@ -79,10 +85,14 @@ export const projectsData = [
     ],
     devURL: "/",
     prodURL: "/",
-    imageURL: "/images/projects/book_store.png",
-    media: ["/images/projects/portfolio.png"],
+    imageURL: "/images/projects/book_store/book_store_0.png",
+    media: Array.from(
+      { length: 1 },
+      (_, i) => `/images/projects/book_store/book_store_${i}.png`
+    ),
     duration: "March 2023 - Present",
     tag: ["All", "Full-Stack"],
+    video: null,
   },
 
   {
@@ -100,6 +110,7 @@ export const projectsData = [
     ),
     duration: "December 2022 - January 2023",
     tag: ["All", "Full-Stack"],
+    video: "https://drive.google.com/uc?id=1vZJkqIVLa_Oo6tOmsHZKkQenUi6vitXg",
   },
   {
     id: 7,
@@ -116,10 +127,14 @@ export const projectsData = [
     ],
     devURL: "/",
     prodURL: "/",
-    imageURL: "/images/projects/Video_Acquisition.png",
-    media: ["/images/projects/Video_Acquisition.png"],
+    imageURL: "/images/projects/video_acquisition/video_acquisition_0.png",
+    media: Array.from(
+      { length: 1 },
+      (_, i) => `/images/projects/video_acquisition/video_acquisition_${i}.png`
+    ),
     duration: "December 2022 - January 2023",
     tag: ["All", "Full-Stack"],
+    video: "https://drive.google.com/uc?id=1WSDJuWE7ny9WRlEP7bbFsFZUdA5zk1td",
   },
   {
     id: 8,
@@ -129,9 +144,14 @@ export const projectsData = [
     technologies: ["Java", "JEE", "Bootstrap", "MySql"],
     devURL: "/",
     prodURL: "/",
-    imageURL: "/images/projects/Commercial_Management.png",
-    media: ["/images/projects/portfolio.png"],
+    imageURL: "/images/projects/commercial_management_0.png",
+    media: Array.from(
+      { length: 1 },
+      (_, i) =>
+        `/images/projects/commercial_management/commercial_management_${i}.png`
+    ),
     duration: "February 2022 - June 2022",
     tag: ["All", "Full-Stack"],
+    video: "https://drive.google.com/uc?id=1TeteX3WSLXC6I5TGosxZRXs3pT00D1T0",
   },
 ];

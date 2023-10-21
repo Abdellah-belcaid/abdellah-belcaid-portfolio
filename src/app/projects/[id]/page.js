@@ -1,5 +1,6 @@
 "use client";
 import ProjectImgRow from "@/components/project/ProjectImgRow";
+import VideoPlayer from "@/components/project/VideoPlayer";
 import { projectsData } from "@/data/projects";
 import Image from "next/image";
 
@@ -27,6 +28,7 @@ function Project({ params }) {
     role,
     tag,
     media,
+    video,
   } = project;
 
   return (
@@ -101,6 +103,8 @@ function Project({ params }) {
         </div>
       </div>
       <ProjectImgRow media={media} />
+
+      {video && <VideoPlayer videoUrl={video} thumbnail={imageURL} />}
     </div>
   );
 }

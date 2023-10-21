@@ -9,7 +9,7 @@ function CertificateCard({ certificate }) {
     <li className="col-span-1 h-full w-full p-2 border border-solid border-white rounded-2xl">
       <Link href={viewLink} className="w-full cursor-pointer rounded-lg">
         <Image
-          src={imageURL}
+          src={"imageURL"}
           alt={name}
           className="w-full h-auto rounded-t-2xl"
           height={200}

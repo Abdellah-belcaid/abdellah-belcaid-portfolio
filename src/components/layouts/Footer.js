@@ -14,7 +14,7 @@ function Footer() {
         <div className="flex space-x-4 text-lg text-black dark:text-white">
           {/* Social Media Icons */}
           <a
-            href="https://twitter.com/abdellah-belcaid"
+            href="https://twitter.com/Belcaid_AIZEN"
             target="_blank"
             rel="noopener noreferrer"
           >
