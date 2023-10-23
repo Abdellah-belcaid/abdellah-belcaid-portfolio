@@ -10,6 +10,15 @@ const cardVariants = {
   initial: { y: 50, opacity: 0 },
   animate: { y: 0, opacity: 1 },
 };
+const tagsList = [
+  "All",
+  "Frontend",
+  "Backend",
+  "Database",
+  "Version Control",
+  "Security",
+  "Devops",
+];
 
 function Certificates() {
   const [tag, setTag] = useState("All");
@@ -24,7 +33,7 @@ function Certificates() {
   const filteredCertifications = certificationList?.filter(
     (certificate) =>
       (certificate?.tag.includes(tag) || tag === "All") &&
-      certificate.name.toLowerCase().includes(searchTerm.toLowerCase()) // Include search term
+      certificate.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   // function to handle search term changes
@@ -38,18 +47,15 @@ function Certificates() {
       </h2>
       <SearchBox onSearchChange={handleSearchChange} />
       <div className="text-black dark:text-white flex flex-wrap  justify-center items-center gap-2 py-6 ">
-        {["All", "Frontend", "Backend", "Database", "Security"].map(
-          (tagName) => (
-            <Tag
-              key={tagName}
-              onClick={handleTagChange}
-              tag={tagName}
-              isSelected={tag === tagName}
-            />
-          )
-        )}
+        {tagsList.map((tagName) => (
+          <Tag
+            key={tagName}
+            onClick={handleTagChange}
+            tag={tagName}
+            isSelected={tag === tagName}
+          />
+        ))}
       </div>
-
       <ul
         ref={ref}
         className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8 mx-2 lg:mx-4"

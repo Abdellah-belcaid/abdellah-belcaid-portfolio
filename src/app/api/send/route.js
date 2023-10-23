@@ -7,11 +7,11 @@ const fromEmail = process.env.NEXT_PUBLIC_FROM_EMAIL;
 
 export async function POST(req) {
   const body = await req.json();
-  
+
   const { name, email, subject, message } = body;
   try {
     const data = await resend.emails.send({
-      from: fromEmail,
+      from: "Contact from <onboardin@resend.dev>",
       to: ["belcaid.abdellah2001@gmail.com", email],
       subject: subject,
       react: <EmailTemplate name={name} subject={subject} message={message} />,
