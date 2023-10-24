@@ -1,5 +1,6 @@
 "use client";
 import CertificateCard from "@/components/CertificateCard";
+import ImageModel from "@/components/UI/ImageModel";
 import SearchBox from "@/components/UI/SearchBox";
 import Tag from "@/components/UI/Tag";
 import { certificationList } from "@/data/certificates";
@@ -40,6 +41,51 @@ function Certificates() {
   const handleSearchChange = (newSearchTerm) => {
     setSearchTerm(newSearchTerm);
   };
+
+  // this part is still on testing mode
+
+  const [clickedImg, setClickedImg] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(null);
+
+  const handleClick = (item, index) => {
+    setCurrentIndex(index);
+    setClickedImg(item.imageURL);
+  };
+
+  const handelRotationRight = () => {
+    const totalLength = filteredCertifications.length;
+    if (currentIndex + 1 >= totalLength) {
+      setCurrentIndex(0);
+      const newUrl = filteredCertifications[0].imageURL;
+      setClickedImg(newUrl);
+      return;
+    }
+    const newIndex = currentIndex + 1;
+    const newUrl = filteredCertifications.filter((item) => {
+      return filteredCertifications.indexOf(item) === newIndex;
+    });
+    const newItem = newUrl[0].imageURL;
+    setClickedImg(newItem);
+    setCurrentIndex(newIndex);
+  };
+
+  const handelRotationLeft = () => {
+    const totalLength = filteredCertifications.length;
+    if (currentIndex === 0) {
+      setCurrentIndex(totalLength - 1);
+      const newUrl = filteredCertifications[totalLength - 1].imageURL;
+      setClickedImg(newUrl);
+      return;
+    }
+    const newIndex = currentIndex - 1;
+    const newUrl = filteredCertifications.filter((item) => {
+      return filteredCertifications.indexOf(item) === newIndex;
+    });
+    const newItem = newUrl[0].imageURL;
+    setClickedImg(newItem);
+    setCurrentIndex(newIndex);
+  };
+
   return (
     <section>
       <h2 className="text-center text-4xl font-bold text-black dark:text-white mt-4 mb-4 ">
@@ -68,10 +114,22 @@ function Certificates() {
             transition={{ duration: 0.5, delay: index * 0.5 }}
             key={index}
           >
-            <CertificateCard certificate={certificate} />
+            <CertificateCard
+              certificate={certificate}
+              handleClickImage={handleClick}
+              index={index}
+            />
           </motion.div>
         ))}
       </ul>
+      {clickedImg && (
+        <ImageModel
+          clickedImg={clickedImg}
+          handelRotationRight={handelRotationRight}
+          setClickedImg={setClickedImg}
+          handelRotationLeft={handelRotationLeft}
+        />
+      )}
     </section>
   );
 }

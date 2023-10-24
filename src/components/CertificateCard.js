@@ -1,23 +1,24 @@
 import Image from "next/image";
-import Link from "next/link";
 
-function CertificateCard({ certificate }) {
+function CertificateCard({ certificate, handleClickImage, index }) {
   const { name, organization, date, imageURL, viewLink, skillsEarned } =
     certificate;
 
   return (
     <li className="col-span-1 h-full w-full p-2 border border-solid border-white rounded-2xl">
-      <Link href={viewLink} className="w-full cursor-pointer rounded-lg">
-        <Image
-          src={imageURL}
-          alt={name}
-          className="w-full h-auto rounded-t-2xl"
-          height={200}
-          width={200}
-        />
-      </Link>
+      <Image
+        src={imageURL}
+        alt={name}
+        className="w-full h-auto rounded-t-2xl"
+        height={200}
+        width={200}
+        onClick={() => handleClickImage(certificate, index)}
+      />
+
       <div className="mt-2 p-2">
-        <h3 className="text-black dark:text-white text-lg font-semibold">{name}</h3>
+        <h3 className="text-black dark:text-white text-lg font-semibold">
+          {name}
+        </h3>
         <p className="text-black dark:text-white/50 text-base">
           {organization} | {date}
         </p>
