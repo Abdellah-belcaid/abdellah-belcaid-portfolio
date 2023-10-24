@@ -24,7 +24,7 @@ export const projectsData = [
     description:
       "Developed a website using Next.js and Tailwind CSS to display information about movies and TV shows. Integrated the TMDB API for data retrieval.",
     technologies: ["Next.js", "Tailwind CSS", "TMDB API"],
-    devURL: "/",
+    devURL: null,
     prodURL: "https://next-imdb-clone-ten.vercel.app",
     imageURL: "/images/projects/imbd_clone/imbd_clone_0.png",
     media: Array.from(
@@ -42,7 +42,7 @@ export const projectsData = [
     description:
       "Developed a Netflix clone using React and Tailwind CSS. Integrated Firebase for user authentication and registration. Users can add their favorite movies to the database using Firestore.",
     technologies: ["React", "Tailwind CSS", "Firebase", "FireStore"],
-    devURL: "/",
+    devURL: null,
     prodURL: "https://netflix-react-app-e8295.firebaseapp.com/",
     imageURL: "/images/projects/react_netflix/react_netflix_0.png",
     media: Array.from(
@@ -60,8 +60,8 @@ export const projectsData = [
     description:
       "Designed and developed a financial management system for a research laboratory. Utilized Spring Boot for the backend and Angular Material for the frontend.",
     technologies: ["Spring Boot", "Angular", "Angular Material", "PostgreSQL"],
-    devURL: "/",
-    prodURL: "/",
+    devURL: null,
+    prodURL: null,
     imageURL: "/images/projects/lab_management/lab_management_0.png",
     media: Array.from(
       { length: 1 },
@@ -83,8 +83,8 @@ export const projectsData = [
       "Angular Material",
       "MySQL",
     ],
-    devURL: "/",
-    prodURL: "/",
+    devURL: null,
+    prodURL: null,
     imageURL: "/images/projects/book_store/book_store_0.png",
     media: Array.from(
       { length: 1 },
@@ -125,8 +125,8 @@ export const projectsData = [
       "Channels",
       "Redis",
     ],
-    devURL: "/",
-    prodURL: "/",
+    devURL: null,
+    prodURL: null,
     imageURL: "/images/projects/video_acquisition/video_acquisition_0.png",
     media: Array.from(
       { length: 1 },
@@ -142,8 +142,8 @@ export const projectsData = [
     description:
       "Developed a commercial management web application using JEE and Bootstrap for the frontend.",
     technologies: ["Java", "JEE", "Bootstrap", "MySql"],
-    devURL: "/",
-    prodURL: "/",
+    devURL: null,
+    prodURL: null,
     imageURL:
       "/images/projects/commercial_management/commercial_management_0.png",
     media: Array.from(

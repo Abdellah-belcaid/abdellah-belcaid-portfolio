@@ -1,14 +1,5 @@
 export const certificationList = [
   {
-    name: "SQL Advanced",
-    organization: "Certification Institute",
-    date: "Month Year",
-    imageURL: "/images/certificates/sql_advanced_certificate.png",
-    skillsEarned: ["SQL", "Database Management"],
-    tag: ["All", "Database"],
-    viewLink: "",
-  },
-  {
     name: "SQL Basic",
     organization: "Certification Institute",
     date: "Month Year",
@@ -27,8 +18,17 @@ export const certificationList = [
     viewLink: "",
   },
   {
+    name: "SQL Advanced",
+    organization: "Certification Institute",
+    date: "Month Year",
+    imageURL: "/images/certificates/sql_advanced_certificate.png",
+    skillsEarned: ["SQL", "Database Management"],
+    tag: ["All", "Database"],
+    viewLink: "",
+  },
+  {
     name: "Developing Front-End Apps with React",
-    organization: "React Certification Institute",
+    organization: "IBM",
     date: "June 2022",
     imageURL: "/images/certificates/Developing_Front-End_Apps_with_React.png",
     skillsEarned: ["Frontend Development", "React"],
@@ -36,20 +36,20 @@ export const certificationList = [
     viewLink: "",
   },
   {
-    name: "Angular 7 for Advanced Level",
-    organization: "Angular Certification Institute",
+    name: "Angular 7 for Intermediate Level",
+    organization: "Great Learning",
     date: "Month Year",
-    imageURL: "/images/certificates/Angular7_for_Advanced_Level.png",
-    skillsEarned: ["Angular", "Advanced Frontend Development"],
+    imageURL: "/images/certificates/Angular7_for_Intermediate_Level.png",
+    skillsEarned: ["Angular", "Intermediate Frontend Development"],
     tag: ["All", "Frontend"],
     viewLink: "",
   },
   {
-    name: "Angular 7 for Intermediate Level",
-    organization: "Angular Certification Institute",
+    name: "Angular 7 for Advanced Level",
+    organization: "Great Learning",
     date: "Month Year",
-    imageURL: "/images/certificates/Angular7_for_Intermediate_Level.png",
-    skillsEarned: ["Angular", "Intermediate Frontend Development"],
+    imageURL: "/images/certificates/Angular7_for_Advanced_Level.png",
+    skillsEarned: ["Angular", "Advanced Frontend Development"],
     tag: ["All", "Frontend"],
     viewLink: "",
   },
@@ -83,7 +83,7 @@ export const certificationList = [
   },
   {
     name: "Introduction to DevOps",
-    organization: "Certification Institute",
+    organization: "Great Learning",
     date: "Month Year",
     imageURL: "/images/certificates/Introduction_to_DevOps.png",
     skillsEarned: ["DevOps", "Continuous Integration", "Continuous Deployment"],
@@ -92,7 +92,7 @@ export const certificationList = [
   },
   {
     name: "Securing Your Spring Boot 3.0 Applications with JWT",
-    organization: "Certification Institute",
+    organization: "Alibou",
     date: "Month Year",
     imageURL:
       "/images/certificates/certificate_of_completion_for_securing_your_spring_boot_3-0_applications_with_JWT.png",
@@ -102,7 +102,7 @@ export const certificationList = [
   },
   {
     name: "Getting Started with Spring Boot",
-    organization: "Certification Institute",
+    organization: "AmigosCode",
     date: "Month Year",
     imageURL:
       "/images/certificates/certificate-of-completion-for-getting-started-with-spring-boot.png",
@@ -112,7 +112,7 @@ export const certificationList = [
   },
   {
     name: "Spring Data MongoDB",
-    organization: "Certification Institute",
+    organization: "AmigosCode",
     date: "Month Year",
     imageURL:
       "/images/certificates/certificate-of-completion-for-spring-data-mongodb.png",
@@ -122,7 +122,7 @@ export const certificationList = [
   },
   {
     name: "Java Basic",
-    organization: "Certification Institute",
+    organization: "HackerRank",
     date: "Month Year",
     imageURL: "/images/certificates/java_basic_certificate.png",
     skillsEarned: ["Java", "Programming Fundamentals"],
@@ -132,7 +132,7 @@ export const certificationList = [
 
   {
     name: "Spring Boot S3 File Uploads with React",
-    organization: "Certification Institute",
+    organization: "AmigosCode",
     date: "Month Year",
     imageURL:
       "/images/certificates/Spring_Boot_S3_File_Uploads_with_React_certificate.png",
@@ -143,7 +143,7 @@ export const certificationList = [
 
   {
     name: "React Advanced",
-    organization: "Meta Certification Institute",
+    organization: "Meta",
     date: "Month Year",
     imageURL: "/images/certificates/Meta_-_React_Advanced.png",
     skillsEarned: ["React", "Frontend Development"],
@@ -152,7 +152,7 @@ export const certificationList = [
   },
   {
     name: "React Basics",
-    organization: "Meta Certification Institute",
+    organization: "Meta",
     date: "Month Year",
     imageURL: "/images/certificates/Meta_-_React_Basics.png",
     skillsEarned: ["React", "Frontend Development"],
@@ -254,7 +254,7 @@ export const certificationList = [
   },
   {
     name: "Complete Data Structures and Algorithms in Java",
-    organization: "Certification Institute",
+    organization: "Udemy",
     date: "Month Year",
     imageURL:
       "/images/certificates/The_Complete_Data_Structures_and_Algorithms_Course_in_Java.png",
