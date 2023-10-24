@@ -32,7 +32,7 @@ const ImageModal = ({
             className="rounded-lg object-cover"
           />
         </div>
-        <div className="flex justify-between">
+        <div className="relative items-center flex justify-between">
           <MdChevronLeft
             size={40}
             className="bg-black text-white dark:bg-white dark:text-black left-0 rounded-full absolute opacity-50 hover:opacity-100 cursor-pointer z-10"
