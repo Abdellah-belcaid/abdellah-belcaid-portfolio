@@ -19,7 +19,7 @@ function Error({ error, reset }) {
         whileHover={{ scale: 1.1 }}
         className="bg-white dark:bg-gray-700  text-dark dark:text-white p-8 rounded-lg border-white shadow-md text-center px-6"
       >
-        <h1 className="text-3xl font-semibold mb-4 ">
+        <h1 className="text-3xl font-semibold mb-4  text-black dark:text-white">
           Oops, something went wrong
         </h1>
         <p className="text-gray-600 dark:text-white mb-6">
