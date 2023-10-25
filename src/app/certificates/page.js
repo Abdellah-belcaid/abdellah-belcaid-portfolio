@@ -7,10 +7,13 @@ import { certificationList } from "@/data/certificates";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 
+// Variants for animation
 const cardVariants = {
   initial: { y: 50, opacity: 0 },
   animate: { y: 0, opacity: 1 },
 };
+
+// List of tags for filtering
 const tagsList = [
   "All",
   "Frontend",
@@ -22,70 +25,56 @@ const tagsList = [
 ];
 
 function Certificates() {
+  // State variables
   const [tag, setTag] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
+  const [clickedImg, setClickedImg] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(null);
+
+  // Ref for tracking element visibility
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
+  // Event handler for tag change
   const handleTagChange = (newTag) => {
     setTag(newTag);
   };
 
+  // Filtering certifications based on tag and search term
   const filteredCertifications = certificationList?.filter(
     (certificate) =>
       (certificate?.tag.includes(tag) || tag === "All") &&
       certificate.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // function to handle search term changes
+  // Event handler for search term change
   const handleSearchChange = (newSearchTerm) => {
     setSearchTerm(newSearchTerm);
   };
 
-  // this part is still on testing mode
-
-  const [clickedImg, setClickedImg] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(null);
-
-  const handleClick = (item, index) => {
+  // Event handler for clicking on certificate images
+  const handleClickImage = (item, index) => {
     setCurrentIndex(index);
     setClickedImg(item.imageURL);
   };
 
-  const handelRotationRight = () => {
+  // Event handler for rotating images left or right
+  const handleRotation = (direction) => {
     const totalLength = filteredCertifications.length;
-    if (currentIndex + 1 >= totalLength) {
-      setCurrentIndex(0);
-      const newUrl = filteredCertifications[0].imageURL;
-      setClickedImg(newUrl);
-      return;
+    let newIndex;
+
+    // Calculate the new index based on the rotation direction
+    if (direction === "right") {
+      newIndex = currentIndex + 1 >= totalLength ? 0 : currentIndex + 1;
+    } else {
+      newIndex = currentIndex - 1 < 0 ? totalLength - 1 : currentIndex - 1;
     }
-    const newIndex = currentIndex + 1;
-    const newUrl = filteredCertifications.filter((item) => {
-      return filteredCertifications.indexOf(item) === newIndex;
-    });
-    const newItem = newUrl[0].imageURL;
-    setClickedImg(newItem);
+
+    // Set the new image URL and index
+    const newUrl = filteredCertifications[newIndex].imageURL;
+    setClickedImg(newUrl);
     setCurrentIndex(newIndex);
   };
-
-  const handelRotationLeft = () => {
-    const totalLength = filteredCertifications.length;
-    if (currentIndex === 0) {
-      setCurrentIndex(totalLength - 1);
-      const newUrl = filteredCertifications[totalLength - 1].imageURL;
-      setClickedImg(newUrl);
-      return;
-    }
-    const newIndex = currentIndex - 1;
-    const newUrl = filteredCertifications.filter((item) => {
-      return filteredCertifications.indexOf(item) === newIndex;
-    });
-    const newItem = newUrl[0].imageURL;
-    setClickedImg(newItem);
-    setCurrentIndex(newIndex);
-  };
-
   return (
     <section>
       <h2 className="text-center text-4xl font-bold text-black dark:text-white mt-4 mb-4 ">
@@ -116,7 +105,7 @@ function Certificates() {
           >
             <CertificateCard
               certificate={certificate}
-              handleClickImage={handleClick}
+              handleClickImage={handleClickImage}
               index={index}
             />
           </motion.div>
@@ -125,9 +114,8 @@ function Certificates() {
       {clickedImg && (
         <ImageModel
           clickedImg={clickedImg}
-          handelRotationRight={handelRotationRight}
           setClickedImg={setClickedImg}
-          handelRotationLeft={handelRotationLeft}
+          handleRotation={handleRotation}
         />
       )}
     </section>

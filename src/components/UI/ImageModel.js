@@ -1,12 +1,7 @@
 import Image from "next/image";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
-const ImageModal = ({
-  clickedImg,
-  setClickedImg,
-  handelRotationRight,
-  handelRotationLeft,
-}) => {
+const ImageModal = ({ clickedImg, setClickedImg, handleRotation }) => {
   const handleClick = (e) => {
     if (e.target.classList.contains("dismiss")) {
       setClickedImg(null);
@@ -32,16 +27,16 @@ const ImageModal = ({
             className="rounded-lg object-cover"
           />
         </div>
-        <div className="relative items-center flex justify-between">
+        <div className="relative items-center flex justify-between mt-6">
           <MdChevronLeft
             size={40}
-            className="bg-black text-white dark:bg-white dark:text-black left-0 rounded-full absolute opacity-50 hover:opacity-100 cursor-pointer z-10"
-            onClick={handelRotationLeft}
+            className="bg-black text-white  left-0 rounded-full absolute opacity-50 hover:opacity-100 cursor-pointer z-10"
+            onClick={() => handleRotation("left")}
           />
           <MdChevronRight
             size={40}
             className="bg-black text-white  right-0 rounded-full absolute opacity-50 hover:opacity-100 cursor-pointer z-10"
-            onClick={handelRotationRight}
+            onClick={() => handleRotation("right")}
           />
         </div>
       </div>
