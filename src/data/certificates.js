@@ -2,7 +2,7 @@ export const certificationList = [
   {
     name: "SQL Basic",
     organization: "Certification Institute",
-    date: "Month Year",
+    date: "04 apr, 2023",
     imageURL: "/images/certificates/sql_basic_certificate.png",
     skillsEarned: ["SQL", "Database Fundamentals"],
     tag: ["All", "Database"],
@@ -11,7 +11,7 @@ export const certificationList = [
   {
     name: "SQL Intermediate",
     organization: "Certification Institute",
-    date: "Month Year",
+    date: "06 apr, 2023",
     imageURL: "/images/certificates/sql_intermediate_certificate.png",
     skillsEarned: ["SQL", "Intermediate Database Management"],
     tag: ["All", "Database"],
@@ -20,7 +20,7 @@ export const certificationList = [
   {
     name: "SQL Advanced",
     organization: "Certification Institute",
-    date: "Month Year",
+    date: "05 May, 2023",
     imageURL: "/images/certificates/sql_advanced_certificate.png",
     skillsEarned: ["SQL", "Database Management"],
     tag: ["All", "Database"],
@@ -29,7 +29,7 @@ export const certificationList = [
   {
     name: "Developing Front-End Apps with React",
     organization: "IBM",
-    date: "June 2022",
+    date: "18 sep, 2023",
     imageURL: "/images/certificates/Developing_Front-End_Apps_with_React.png",
     skillsEarned: ["Frontend Development", "React"],
     tag: ["All", "Frontend"],
@@ -38,7 +38,7 @@ export const certificationList = [
   {
     name: "Angular 7 for Intermediate Level",
     organization: "Great Learning",
-    date: "Month Year",
+    date: "sep, 2023",
     imageURL: "/images/certificates/Angular7_for_Intermediate_Level.png",
     skillsEarned: ["Angular", "Intermediate Frontend Development"],
     tag: ["All", "Frontend"],
@@ -47,7 +47,7 @@ export const certificationList = [
   {
     name: "Angular 7 for Advanced Level",
     organization: "Great Learning",
-    date: "Month Year",
+    date: "sep, 2023",
     imageURL: "/images/certificates/Angular7_for_Advanced_Level.png",
     skillsEarned: ["Angular", "Advanced Frontend Development"],
     tag: ["All", "Frontend"],
@@ -252,15 +252,15 @@ export const certificationList = [
     tag: ["All", "Database"],
     viewLink: "",
   },
-  {
-    name: "Complete Data Structures and Algorithms in Java",
-    organization: "Udemy",
-    date: "Month Year",
-    imageURL:
-      "/images/certificates/The_Complete_Data_Structures_and_Algorithms_Course_in_Java.png",
-    skillsEarned: ["Data Structures", "Algorithms", "Java"],
-    tag: ["All", "Java"],
-    viewLink: "",
-  },
-  // Add more certificate objects following the same format for other certificates
+  // {
+  //   name: "Complete Data Structures and Algorithms in Java",
+  //   organization: "Udemy",
+  //   date: "Month Year",
+  //   imageURL:
+  //     "/images/certificates/The_Complete_Data_Structures_and_Algorithms_Course_in_Java.png",
+  //   skillsEarned: ["Data Structures", "Algorithms", "Java"],
+  //   tag: ["All", "Java"],
+  //   viewLink: "",
+  // },
+  // // Add more certificate objects following the same format for other certificates
 ];

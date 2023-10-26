@@ -1,17 +1,17 @@
 "use client";
 import { sendEmail } from "@/services/emailService";
+import { notifyError, notifySuccess } from "@/utils/notifyMessages";
 import Link from "next/link";
-import { useState } from "react";
 import { RiGithubFill, RiLinkedinBoxFill } from "react-icons/ri";
+import { ToastContainer } from "react-toastify";
 
+import "react-toastify/dist/ReactToastify.css";
 const socialLinks = {
   linkedin: "https://www.linkedin.com/in/Abdellah-belcaid",
   github: "https://github.com/Abdellah-belcaid",
 };
 
 function Contact() {
-  const [emailSubmitted, setEmailSubmitted] = useState(false);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
@@ -24,10 +24,9 @@ function Contact() {
     const formResult = await sendEmail(data);
 
     if (formResult.success) {
-      setEmailSubmitted(true);
-      alert("Message has been sent successfully");
+      notifySuccess();
     } else {
-      alert(formResult.error);
+      notifyError();
     }
   };
 
@@ -55,7 +54,7 @@ function Contact() {
       </div>
       <div>
         <form onSubmit={handleSubmit} className="flex flex-col z-10">
-          <div className="mb-6 flex flex-col md:flex-row  justify-between md:space-x-2">
+          <div className="mb-6 grid grid-cols-1 gap-1 md:grid-cols-2  justify-between md:space-x-2">
             <div className="flex flex-col my-4 md:my-0">
               <label
                 htmlFor="name"
@@ -117,6 +116,7 @@ function Contact() {
               name="message"
               id="message"
               placeholder="let's talk about ..."
+              rows={10}
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5  "
               required
             />
@@ -127,12 +127,10 @@ function Contact() {
           >
             Send Message
           </button>
-          {emailSubmitted && (
-            <p className="text-green-500 text-sm mt-2">
-              email sent successfully
-            </p>
-          )}
         </form>
+      </div>
+      <div>
+        <ToastContainer />
       </div>
     </section>
   );

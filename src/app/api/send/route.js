@@ -9,17 +9,25 @@ export async function POST(req) {
   const body = await req.json();
 
   const { name, email, subject, message } = body;
+
   try {
+    const emailContent = (
+      <EmailTemplate name={name} subject={subject} message={message} />
+    );
+
     const data = await resend.emails.send({
       from: "Contact from <onboardin@resend.dev>",
       to: ["belcaid.abdellah2001@gmail.com", email],
-      subject: subject,
-      react: <EmailTemplate name={name} subject={subject} message={message} />,
+      subject: `Re: ${subject}`,
+      react: emailContent,
     });
+
+    console.log("Email sent successfully:", data);
 
     return NextResponse.json(data);
   } catch (error) {
     console.error("Server-side error:", error);
-    return NextResponse.json({ error });
+
+    return NextResponse.json({ error: "Error sending the email." });
   }
 }
