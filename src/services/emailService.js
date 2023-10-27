@@ -1,5 +1,3 @@
-// submitForm.js
-
 export async function sendEmail(data) {
   try {
     const jsonData = JSON.stringify(data);
