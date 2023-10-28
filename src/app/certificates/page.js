@@ -1,19 +1,19 @@
 "use client";
 import CertificateCard from "@/components/CertificateCard";
 import ImageModel from "@/components/UI/ImageModel";
+import Pagination from "@/components/UI/Pagination";
 import SearchBox from "@/components/UI/SearchBox";
 import Tag from "@/components/UI/Tag";
 import { certificationList } from "@/data/certificates";
+import { filterItems, paginateItems } from "@/utils/utilsFunction";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 
-// Variants for animation
 const cardVariants = {
   initial: { y: 50, opacity: 0 },
   animate: { y: 0, opacity: 1 },
 };
 
-// List of tags for filtering
 const tagsList = [
   "All",
   "Frontend",
@@ -25,63 +25,66 @@ const tagsList = [
 ];
 
 function Certificates() {
-  // State variables
   const [tag, setTag] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
   const [clickedImg, setClickedImg] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
 
-  // Ref for tracking element visibility
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const itemsPerPage = 6;
 
-  // Event handler for tag change
   const handleTagChange = (newTag) => {
     setTag(newTag);
   };
 
-  // Filtering certifications based on tag and search term
-  const filteredCertifications = certificationList?.filter(
-    (certificate) =>
-      (certificate?.tag.includes(tag) || tag === "All") &&
-      certificate.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
-  // Event handler for search term change
   const handleSearchChange = (newSearchTerm) => {
     setSearchTerm(newSearchTerm);
   };
 
-  // Event handler for clicking on certificate images
+  const filteredCertifications = filterItems(
+    certificationList,
+    tag,
+    searchTerm,
+    "name"
+  );
+  const currentCertifications = paginateItems(
+    filteredCertifications,
+    currentPage,
+    itemsPerPage
+  );
+
+  const totalCertifications = filteredCertifications.length;
+  const totalPages = Math.ceil(totalCertifications / itemsPerPage);
+
   const handleClickImage = (item, index) => {
     setCurrentIndex(index);
     setClickedImg(item.imageURL);
   };
 
-  // Event handler for rotating images left or right
   const handleRotation = (direction) => {
     const totalLength = filteredCertifications.length;
     let newIndex;
 
-    // Calculate the new index based on the rotation direction
     if (direction === "right") {
       newIndex = currentIndex + 1 >= totalLength ? 0 : currentIndex + 1;
     } else {
       newIndex = currentIndex - 1 < 0 ? totalLength - 1 : currentIndex - 1;
     }
 
-    // Set the new image URL and index
     const newUrl = filteredCertifications[newIndex].imageURL;
     setClickedImg(newUrl);
     setCurrentIndex(newIndex);
   };
+
   return (
     <section>
       <h2 className="text-center text-4xl font-bold text-black dark:text-white mt-4 mb-4 ">
         My Certificates
       </h2>
       <SearchBox onSearchChange={handleSearchChange} />
-      <div className="text-black dark:text-white flex flex-wrap  justify-center items-center gap-2 py-6 ">
+      <div className="text-black dark:text-white flex flex-wrap justify-center items-center gap-2 py-6 ">
         {tagsList.map((tagName) => (
           <Tag
             key={tagName}
@@ -95,7 +98,7 @@ function Certificates() {
         ref={ref}
         className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8 mx-2 lg:mx-4"
       >
-        {filteredCertifications?.map((certificate, index) => (
+        {currentCertifications.map((certificate, index) => (
           <motion.div
             variants={cardVariants}
             initial="initial"
@@ -118,6 +121,12 @@ function Certificates() {
           handleRotation={handleRotation}
         />
       )}
+
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={setCurrentPage}
+      />
     </section>
   );
 }
