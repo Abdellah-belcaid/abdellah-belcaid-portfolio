@@ -24,7 +24,7 @@ export const projectsData = [
     description:
       "Developed a website using Next.js and Tailwind CSS to display information about movies and TV shows. Integrated the TMDB API for data retrieval.",
     technologies: ["Next.js", "Tailwind CSS", "TMDB API"],
-    devURL: null,
+    devURL: "https://github.com/Abdellah-belcaid/next-imdb-clone",
     prodURL: "https://next-imdb-clone-ten.vercel.app",
     imageURL: "/images/projects/imbd_clone/imbd_clone_0.png",
     media: Array.from(
@@ -33,7 +33,7 @@ export const projectsData = [
     ),
     duration: "August 2023 - Present",
     tag: ["All", "Front-End"],
-    video: null,
+    video: "https://drive.google.com/uc?id=1xBSr22LPuTJVEUbQ1Lbs_EsEuRkLMOWL",
   },
 
   {
@@ -42,7 +42,7 @@ export const projectsData = [
     description:
       "Developed a Netflix clone using React and Tailwind CSS. Integrated Firebase for user authentication and registration. Users can add their favorite movies to the database using Firestore.",
     technologies: ["React", "Tailwind CSS", "Firebase", "FireStore"],
-    devURL: null,
+    devURL: "https://github.com/Abdellah-belcaid/netflix-react-app",
     prodURL: "https://netflix-react-app-e8295.firebaseapp.com/",
     imageURL: "/images/projects/react_netflix/react_netflix_0.png",
     media: Array.from(
@@ -61,7 +61,7 @@ export const projectsData = [
       "Designed and developed a financial management system for a research laboratory. Utilized Spring Boot for the backend and Angular Material for the frontend.",
     technologies: ["Spring Boot", "Angular", "Angular Material", "PostgreSQL"],
     devURL: null,
-    prodURL: null,
+    prodURL: "https://lab-managment.vercel.app",
     imageURL: "/images/projects/lab_management/lab_management_0.png",
     media: Array.from(
       { length: 1 },
@@ -69,7 +69,7 @@ export const projectsData = [
     ),
     duration: "May 2023 - June 2023",
     tag: ["All", "Full-Stack"],
-    video: null,
+    video: "https://drive.google.com/uc?id=1FDt4A74i5ByZhTfHVL9WqI67i88rKXED",
   },
   {
     id: 5,
@@ -92,7 +92,7 @@ export const projectsData = [
     ),
     duration: "March 2023 - Present",
     tag: ["All", "Full-Stack"],
-    video: null,
+    video: "https://drive.google.com/uc?id=1w8XKSCmvVcuWZP3351bFycP-ZeWmnkvL",
   },
 
   {
