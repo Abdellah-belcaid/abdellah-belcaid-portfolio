@@ -1,13 +1,23 @@
+"use client";
+import { certificationList } from "@/data/certificates";
+import { projectsData } from "@/data/projects";
+import { fadeIn } from "@/utils/variants";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import AnimationNumbers from "../AnimationNumbers";
-import { projectsData } from "@/data/projects";
-import { certificationList } from "@/data/certificates";
 
 function BiographySection() {
   return (
     <section>
       <div className="grid md:grid-cols-8 w-full gap-16 sm:gap-8">
-        <div className="flex flex-col items-start md:col-span-4 xl:col-span-3 order-2 md:order-1 justify-start ">
+        <motion.div
+          variants={fadeIn("down", 0.8)}
+          initial="hidden"
+          animate="show"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="flex flex-col items-start md:col-span-4 xl:col-span-3 order-2 md:order-1 justify-start "
+        >
           <h2 className="mb-2 text-lg font-bold uppercase text-black dark:text-white/60">
             Biography
           </h2>
@@ -37,8 +47,15 @@ function BiographySection() {
               world of technology.
             </p>
           </div>
-        </div>
-        <div className="relative h-max rounded-2xl border-2 border-solid border-white p-8 md:col-span-4 xl:col-span-3 order-1 md:order-2">
+        </motion.div>
+        <motion.div
+          variants={fadeIn("down", 1.4)}
+          initial="hidden"
+          animate="show"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="relative h-max rounded-2xl border-2 border-solid border-white p-8 md:col-span-4 xl:col-span-3 order-1 md:order-2"
+        >
           <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[110%] rounded-2xl bg-white " />
           <Image
             className="rounded-2xl h-auto w-full"
@@ -47,9 +64,16 @@ function BiographySection() {
             height={200}
             alt=""
           />
-        </div>
+        </motion.div>
 
-        <div className="flex flex-row items-end justify-between xl:flex-col  xl:col-span-2 order-3 md:order-3">
+        <motion.div
+          variants={fadeIn("down", 1.8)}
+          initial="hidden"
+          animate="show"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="flex flex-row items-end justify-between xl:flex-col  xl:col-span-2 order-3 md:order-3"
+        >
           <div className="flex flex-col items-end justify-center">
             <span className="inline-block text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold">
               <AnimationNumbers value={0} prefix={"+"} postfix={""} />
@@ -60,7 +84,11 @@ function BiographySection() {
           </div>
           <div className="flex flex-col items-end justify-center">
             <span className="inline-block text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold">
-              <AnimationNumbers value={projectsData.length} prefix={"~"} postfix={""} />
+              <AnimationNumbers
+                value={projectsData.length}
+                prefix={"~"}
+                postfix={""}
+              />
             </span>
             <h2 className="text-sm sm:text-base md:text-lg xl:text-xl font-medium capitalize text-white/60">
               Projects
@@ -68,13 +96,17 @@ function BiographySection() {
           </div>
           <div className="flex flex-col items-end justify-center">
             <span className="inline-block text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold">
-              <AnimationNumbers value={certificationList.length} prefix={"+"} postfix={""} />
+              <AnimationNumbers
+                value={certificationList.length}
+                prefix={"+"}
+                postfix={""}
+              />
             </span>
             <h2 className="text-sm sm:text-base md:text-lg xl:text-xl font-medium capitalize text-white/60">
               Certificates
             </h2>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

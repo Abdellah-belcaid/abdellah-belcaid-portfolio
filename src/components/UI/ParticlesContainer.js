@@ -15,7 +15,7 @@ const ParticlesContainer = () => {
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
-        fullScreen: { enable: false },
+        fullScreen: { enable: true },
         background: {
           color: {
             value: "",
@@ -25,7 +25,7 @@ const ParticlesContainer = () => {
         interactivity: {
           events: {
             onClick: {
-              enable: false,
+              enable: true,
               mode: "push",
             },
             onHover: {
@@ -42,14 +42,43 @@ const ParticlesContainer = () => {
               distance: 200,
               duration: 0.4,
             },
+            grab: {
+              distance: 400,
+              line_linked: {
+                opacity: 1,
+              },
+            },
+            bubble: {
+              distance: 400,
+              size: 40,
+              duration: 2,
+              opacity: 8,
+              speed: 3,
+            },
           },
         },
         particles: {
           color: {
-            value: "#e68e2e",
+            value: [
+              "#e68e2e",
+              "#4287f5",
+              "#ff3399",
+              "#00cc66",
+              "#ff9900",
+              "#9933cc",
+            ],
           },
           links: {
-            color: "#f5d393",
+            color: {
+              value: [
+                "#e68e2e",
+                "#4287f5",
+                "#ff3399",
+                "#00cc66",
+                "#ff9900",
+                "#9933cc",
+              ],
+            },
             distance: 150,
             enable: true,
             opacity: 0.5,
@@ -80,6 +109,19 @@ const ParticlesContainer = () => {
           },
           shape: {
             type: "circle",
+            options: {
+              sides: 5,
+            },
+          },
+          rotate: {
+            value: 0,
+            random: true,
+            direction: "clockwise",
+            animation: {
+              enable: true,
+              speed: 5,
+              sync: false,
+            },
           },
           size: {
             value: { min: 1, max: 10 },
