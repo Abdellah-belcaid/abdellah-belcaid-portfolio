@@ -15,7 +15,7 @@ function AnimationNumbers({ value, prefix, postfix }) {
         includeComma
         animateToNumber={parseInt(value)}
         locale="en-US"
-        className="text-white text-base md:text-lg xl:text-xl"
+        className="text-white text-ms md:text-lg xl:text-xl"
         configs={(_, index) => {
           return {
             mass: 1,

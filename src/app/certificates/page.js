@@ -21,7 +21,7 @@ const tagsList = [
   "Database",
   "Version Control",
   "Security",
-  "Devops",
+  "DevOps",
 ];
 
 function Certificates() {
@@ -104,6 +104,7 @@ function Certificates() {
             initial="initial"
             animate={isInView ? "animate" : "initial"}
             transition={{ duration: 0.5, delay: index * 0.5 }}
+            whileHover={{ scale: 1.1 }}
             key={index}
           >
             <CertificateCard

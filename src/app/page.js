@@ -17,8 +17,6 @@ export default function Home() {
             variants={fadeIn("right", 0.2)}
             initial="hidden"
             animate="show"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
             className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
           >
             <h1 className="text-black dark:text-white mb-8 text-xl sm:text-2xl lg:text-5xl lg:leading-normal font-extrabold">
@@ -67,8 +65,6 @@ export default function Home() {
               variants={fadeIn("right", 0.8)}
               initial="hidden"
               animate="show"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
               className="rounded-full bg-slate-800 dark:bg-[#181818]  w-[250px] h-[250px]  lg:w-[400px] lg:h-[400px] relative"
             >
               <Image
@@ -82,13 +78,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <motion.div
-        variants={fadeIn("top", 1.6)}
-        initial="hidden"
-        animate="show"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-      >
+      <motion.div variants={fadeIn("top", 1.6)} initial="hidden" animate="show">
         <AchievementSection />
       </motion.div>
     </main>

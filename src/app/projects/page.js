@@ -66,6 +66,7 @@ function Projects() {
             initial="initial"
             animate={isInView ? "animate" : "initial"}
             transition={{ duration: 0.5, delay: index * 0.5 }}
+            whileHover={{ scale: 1.15 }}
             key={index}
           >
             <ProjectCard project={project} />

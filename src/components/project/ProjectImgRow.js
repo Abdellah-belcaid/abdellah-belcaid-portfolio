@@ -1,3 +1,6 @@
+"use client";
+import { fadeIn } from "@/utils/variants";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
@@ -24,7 +27,10 @@ function ProjectImgRow({ media }) {
           className="w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth  scrollbar-hide relative"
         >
           {media.map((img, index) => (
-            <div
+            <motion.div
+              variants={fadeIn("top", 0.5 * index)}
+              initial="hidden"
+              animate="show"
               key={index}
               className="w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block cursor-pointer relative p-2 "
             >
@@ -36,7 +42,7 @@ function ProjectImgRow({ media }) {
                 objectFit="cover"
                 alt=""
               />
-            </div>
+            </motion.div>
           ))}
         </div>
         <MdChevronRight
