@@ -6,6 +6,8 @@ import { Inter } from "next/font/google";
 import Providers from "./Providers";
 import "./style/globals.css";
 
+import { Analytics } from "@vercel/analytics/react";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -24,6 +26,7 @@ export default function RootLayout({ children }) {
             <Header />
             <div className="container mx-auto mt-24 md:px-12 md:py-4 ">
               {children}
+              <Analytics />
             </div>
             <Footer />
           </div>
