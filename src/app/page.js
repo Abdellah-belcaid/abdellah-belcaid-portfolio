@@ -69,7 +69,7 @@ export default function Home() {
             >
               <Image
                 className="absolute rounded-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                src={"/images/avatar 2.png"}
+                src={"/images/belcaid-1.png"}
                 width={350}
                 height={350}
                 alt=""
