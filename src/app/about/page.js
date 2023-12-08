@@ -14,7 +14,7 @@ function About() {
       <motion.div
         variants={fadeIn("down", 0.8)}
         initial="hidden"
-        animate="show"        
+        animate="show"
         whileTap={{ scale: 0.9 }}
       >
         <h2 className="text-4xl md:text-6xl font-bold mb-12 flex flex-col items-center justify-center">
